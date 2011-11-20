@@ -1,0 +1,40 @@
+\documentclass[a4paper,11pt]{article}
+% Created: 2009-4-16
+% Last Change: 2009-05-24 20:05:16
+\input{MyLayout.tex}
+\usepackage{CJK}
+\usepackage{pinyin}
+\usepackage{setspace, wasysym, graphicx}
+\usepackage{fancyvrb}
+\usepackage{picins}
+\usepackage[CJK]{ruby}
+\begin{CJK}{GBK}{fs}
+\usepackage{color}
+
+\input{MyCommand.tex}
+
+\begin{document}
+\section{汉语拼音}
+要写汉语拼音可使用 \Memph{pinyin} 宏包。
+在导言区导入宏包后直接在正文以下面的格式写即可%
+(5表示轻声, v 表示拼音字母)：\\
+\verb+\han4 \yu3 \pin5 \yin5+ $\to$ \han4 \yu3 \pin5 \yin5\\
+\verb+\nv3 \hai2 \er5+ $\to$ \nv3 \hai2 \er5
+
+再加上 \Memph{ruby} 宏包 \verb+\usepackage[CJK]{ruby}+
+(CJK 选项也可以不加)就可以在汉字头上写拼音注音了。\\
+\verb+\ruby{像}{\xiang4}\ruby{这}{\zhe4}\ruby{样}{\yang4}+ $\to$
+{\Huge\ruby{像}{\xiang4}\ruby{这}{\zhe4}\ruby{样}{\yang4}}
+\smiley\footnote{这里示例的字体放大为 Huge，因为在 normalsize
+的字体上注音太长，排不下，\LaTeX 会给出 Warning。字体放大注音也更清晰。
+还发现一个问题，如果这个 footnote 紧跟在放大文字末尾的右大括号后面，
+\LaTeX 会出现 error 信息，
+提示 footnote 命令少了半个大括号，不知道什么原因，
+所以我在这里加了笑脸符号。还有，脚注里面似乎不能用 verb 命令}
+
+
+
+
+\end{CJK}
+\end{document}
+

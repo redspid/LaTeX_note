@@ -1,0 +1,126 @@
+---------- LOG ----- 版本修改时间 2011-01-28 08:30:21 -------------
+2009-2-6 17:06:17 增加 {Asymptote:导入图像文件}，增加 ChangeLog.txt 文件
+2009-2-6 17:14:03 根据 log 文件修改 {用 \LaTeX -Suite 导入模板} 的模板名，
+避免溢出 textwidth。
+2009-2-7 10:13:54 根据 2008年7月13日20:42:06 所作的注释，
+暂将文档创建时间定为 2008年7月1日。
+2009-2-7 10:24:30 将 ChangeLog.txt 变更为 Log_Todo.txt
+2009-2-8 0:15:28 在前言增加 Donald E.Knuth
+2009-2-9 14:23:15 整理插图目录，使源码和图像文件名称对应
+2009-2-9 17:04:33 增加 {LaTeX 中局部行距设置}
+2009-2-10 11:42:21 增加 {Asymptote: cut() 和 struct slice}
+2009-2-10 11:44:32 全局行距设置为 1.3倍，对多行 verbatim
+环境设置使用 setspace 宏包设为1倍行距。
+2009-2-10 15:04:34 全局行距设置为 1.2倍
+2009-2-10 15:12:58 将部分导入的宏包名放在一个列表里
+2009-2-10 16:00:00 由于 verbatim 环境的问题，在用它定义新的环境时，
+不一点能有效，暂时放弃定义 code 环境替代
+\begin{spacing}{1}\begin{verbatim}\end{verbatim}\end{spacing} 的计划。
+2009-2-10 16:17:36 增加 {Asymptote: cut() 和 struct slice} 图示
+2009-2-12 22:32:59 使用 fancyvrb 宏包定制代码显示环境
+2009-2-13 11:19:38 将 Verbatim 环境的 frame=single 改为 leftline，
+增加代码行号，在文中所有代码显示部分使用 Verbatim 环境。
+2009-2-13 17:14:13 增加部分 LaTeX-Suite 快捷键内容
+2009-2-15 3:29:45 增加 {Asymptote 颜色名称}
+2009-2-16 9:43:44 建立测试文件，以后新增部分测试后加入正式文件
+2009-2-17 17:44:05 增加{Asymptote: 字体大小，Arrow、UnFill 大小 和 xtick}
+2009-3-2 16:42:10 增加{Asymptote: size()函数}
+2009-3-3 23:41:12 增加{汉语拼音}
+2009-3-4 12:25:34 补充{汉语拼音}中汉字头上注音内容
+2009-3-4 21:56:55 参考资料归类至 files 目录中，测试文件重命名为 lab.tex
+2009-3-5 0:53:37 增加{特殊符号}
+2009-4-16 10:29 为避免命令冲突，将主文件中的拼音部分删去，
+增加 additional.tex 文档，作为附加文档。
+将页面设置的部分放在 preamble.tex 文件中，
+主文件用 \input 导入 preamble.tex 以保持文档页面设置一致。
+2009-05-22 23:49:00 define newcommand \Memph to instend to \emph
+2009-05-23 23:39:34 增加自定义颜色名称 Mzise 作为 \emph 文本的颜色，
+增加{自定义颜色}
+2009-05-24 19:48:39 preamble.tex 更名为 MyLayout.tex，将共用的自定义
+命令提出来放进 MyCommand.tex
+2009-05-24 21:03:41 更改背景颜色
+2009-07-01 16:01:45 创建 latexNote.cls 类文件,暂不启用，因为 additional.tex
+中 CJK 包有选项，和 latex_note.tex 中不一致
+2011-02-01 16:41:24 单/双栏混排
+
+
+
+
+---------- Todo ---------------
+使用 make 管理文档
+导入局部命令
+汉字下方注音
+数学环境外的符号堆叠
+Verbatim 环境
+利用 \parpic 和 minipage 环境或 \parbox 做文字块和正文的混排
+\raisebox \scalebox \reflectbox
+Asymptote 读写文件
+Asymptote clip
+LaTeX 颜色名称
+fancyvrb
+=====
+frame=single lines topline bottomline leftline
+framerule=1mm
+
+framesep=
+formatcom=\color{red}
+label=Text
+labelposition=topline, bottomline
+baselinestretch=2
+numbers=left
+numbersep=2mm
+xleftmargin
+xrightmargin
+=====
+
+
+%%%%% fancyvrb %%%%%%%%%%
+\usepackage{fancyvrb}
+\usepackage{color}
+...
+
+\RecustomVerbatimEnvironment{Verbatim}{Verbatim}{%
+frame=leftline, framerule=0.5mm, xleftmargin=2em,%
+framesep=1mm, rulecolor=\color{red},%
+baselinestretch=1, numbers=left, numbersep=1mm}
+
+\begin{Verbatim}
+#! /usr/bin/perl
+use warnings;
+use strict;
+\end{Verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+8.3 rotatebox  命令
+
+\rotatebox[选项]{角度}{对象}
+
+\rotatebox 将对象旋转一给定度数的角度，逆时针方向为正。缺省地， 对象绕它的参考点旋转。 \rotatebox 命令中的 选项 允许对象绕给定的点来旋转。
+
+   1. 给定 [x=xdim,y=ydim]，则对象旋转所绕的点相对于参考点的 坐标为 (xdim,ydim)。
+   2. origin 选项指定 12 个特殊点其中之 一（见图 8.1）。 origin 点的水平位置由 lcr （分别代表左、中、右）其中 之一确定，垂直位置则由 t,c,B,b （分别代表顶部、中部、基线、底部） 中的一个来确定。例如：
+
+      [rb]
+          右下角。 
+      [lt]
+          左上角。 
+      [cB]
+          图形基线的中点。 
+
+      几点说明：
+          * 标记字母的顺序并不重要， [br] 就等于 [rb]。
+          * c 代表水平位置的中点还是垂直位置的中点靠和它一起的 标记字母来决定。
+          * 如果只给出一个标记字母，那么另一个将被假设为 c。 即 [c] 等于 [cc]， [l] 等于  [lc]， [t] 等于 [ct] 等等。
+
+图 8.1: Available Origin Point
+\includegraphics[width=.6\textwidth]{orig-point.eps}
+
+
+下面是一个例子：
+\setlength{\fboxsep}{0mm}
+\newcommand{\MyRot}[1]{%
+   \fbox{\rotatebox{#1}{旋转~$#1^\circ$}}}
+\MyRot{0} \MyRot{45} \MyRot{90}
+\MyRot{135} \MyRot{180} \MyRot{225}
+

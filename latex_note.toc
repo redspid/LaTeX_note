@@ -44,3 +44,4 @@
 \contentsline {section}{\numberline {32}Beamer 文档类}{15}
 \contentsline {section}{\numberline {33}自定义颜色}{15}
 \contentsline {section}{\numberline {34}单/双栏混排}{15}
+\contentsline {section}{\numberline {35}Asymptote: 多行文本的 label}{16}

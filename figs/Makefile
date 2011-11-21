@@ -1,7 +1,7 @@
 CC=asy -noV
 obj=angle.eps arrow_show.eps asy_color.eps asy_color2.eps \
 	chinese.eps connection_style.eps cut_slice.eps dot_label_tick.eps \
-	input_fig.eps label_path.eps reflect.eps
+	input_fig.eps label_path.eps reflect.eps label_muti_lines.eps
 all: $(obj)
 
 angle.eps: angle.asy
@@ -33,6 +33,9 @@ input_fig.eps: input_fig.asy hb.eps
 
 label_path.eps: label_path.asy
 	$(CC) label_path.asy
+
+label_path.eps: label_muti_lines.asy
+	$(CC) label_muti_lines.asy
 
 reflect.eps: reflect.asy
 	$(CC) reflect.asy

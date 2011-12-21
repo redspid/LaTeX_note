@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="LaTeX_Note" default="build" basedir=".">
+	<target name="build" depends="">
+		<apply executable="pdflatex">
+			<fileset dir="." includes="latex_note.tex"/>
+		</apply>
+
+		<!-- compiler 2 times -->
+		<apply executable="pdflatex">
+			<fileset dir="." includes="latex_note.tex"/>
+		</apply>
+	</target>
+
+	<target name="clean">
+		<delete dir="." includes="*.log"/>
+	</target>
+</project>

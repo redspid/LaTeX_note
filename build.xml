@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="LaTeX_Note" default="build" basedir=".">
-	<target name="build" depends="">
-		<apply executable="pdflatex">
-			<fileset dir="." includes="latex_note.tex"/>
-		</apply>
+<project name="LaTeX_Note" default="pdf" basedir=".">
 
-		<!-- compiler 2 times -->
-		<apply executable="pdflatex">
-			<fileset dir="." includes="latex_note.tex"/>
+	<property name="src" value="latex_note.tex,additional.tex"/>
+	<property name="dvi" value="latex_note.dvi,additional.dvi"/>
+	<property name="pdf" value="latex_note.pdf,additional.pdf"/>
+
+	<target name="init">
+		<apply executable="asy" dir="figs">
+			<arg value="-noV"/>
+			<fileset dir="figs">
+				<include name="*.asy"/>
+				<exclude name="asy_color.asy"/>
+
+				<depend targetdir="figs" granularity="100">
+					<mapper type="glob" from="*.asy" to="*.eps"/>
+				</depend>
+			</fileset>
+		</apply>
+	</target>
+
+	<target name="compile" depends="init">
+		<apply executable="latex">
+			<fileset dir="." includes="${src}">
+				<depend targetdir="." granularity="100">
+					<mapper type="glob" from="*.tex" to="*.dvi"/>
+				</depend>
+			</fileset>
+		</apply>
+	</target>
+
+	<target name="recompile" depends="compile">
+		<sleep seconds="1"/>
+		<apply executable="latex">
+			<fileset dir="." includes="${src}"/>
+		</apply>
+	</target>
+
+	<target name="pdf" depends="recompile">
+		<sleep seconds="1"/>
+		<apply executable="dvipdfmx">
+			<fileset dir="." includes="${dvi}">
+				<depend targetdir="." granularity="100">
+					<mapper type="glob" from="*.dvi" to="*.pdf"/>
+				</depend>
+			</fileset>
 		</apply>
 	</target>
 
 	<target name="clean">
-		<delete dir="." includes="*.log"/>
+		<delete dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof"/>
 	</target>
+
+	<target name="cleanall">
+		<delete>
+			<fileset dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof,${pdf}"/>
+		</delete>
+
+	</target>
+
 </project>

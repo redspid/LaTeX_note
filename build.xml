@@ -2,6 +2,7 @@
 <project name="LaTeX_Note" default="pdf" basedir=".">
 
 	<property name="src" value="latex_note.tex,additional.tex"/>
+	<property name="toc" value="latex_note.toc"/>
 	<property name="dvi" value="latex_note.dvi,additional.dvi"/>
 	<property name="pdf" value="latex_note.pdf,additional.pdf"/>
 
@@ -19,24 +20,36 @@
 		</apply>
 	</target>
 
+	<mapper id="tex2pdf">
+		<globmapper from="*.tex" to="*.pdf"/>
+		<globmapper from="*.cls" to="*.pdf"/>
+	</mapper>
+
 	<target name="compile" depends="init">
 		<apply executable="latex">
 			<fileset dir="." includes="${src}">
-				<depend targetdir="." granularity="100">
-					<mapper type="glob" from="*.tex" to="*.dvi"/>
+				<depend targetdir=".">
+					<mapper refid="tex2pdf"/>
 				</depend>
 			</fileset>
 		</apply>
-	</target>
-
-	<target name="recompile" depends="compile">
+		<echo>first compile success.</echo>
 		<sleep seconds="1"/>
-		<apply executable="latex">
-			<fileset dir="." includes="${src}"/>
-		</apply>
+		<available file="${toc}" property="again"/>
 	</target>
 
-	<target name="pdf" depends="recompile">
+	<target name="compile_again" if="again" depends="compile">
+		<apply executable="latex">
+			<fileset dir="." includes="${src}">
+				<depend targetdir=".">
+					<mapper refid="tex2pdf"/>
+				</depend>
+			</fileset>
+		</apply>
+		<echo>twice compile success.</echo>
+	</target>
+
+	<target name="pdf" depends="compile_again">
 		<sleep seconds="1"/>
 		<apply executable="dvipdfmx">
 			<fileset dir="." includes="${dvi}">
@@ -47,13 +60,18 @@
 		</apply>
 	</target>
 
+	<fileset id="tmp_file" dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof"/>
+
 	<target name="clean">
-		<delete dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof"/>
+		<delete>
+			<fileset refid="tmp_file"/>
+		</delete>
 	</target>
 
 	<target name="cleanall">
 		<delete>
-			<fileset dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof,${pdf}"/>
+			<fileset refid="tmp_file"/>
+			<fileset dir="." includes="${pdf}"/>
 		</delete>
 
 	</target>

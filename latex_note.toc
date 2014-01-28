@@ -45,3 +45,4 @@
 \contentsline {section}{\numberline {33}自定义颜色}{15}
 \contentsline {section}{\numberline {34}单/双栏混排}{15}
 \contentsline {section}{\numberline {35}Asymptote: 多行文本的 label}{16}
+\contentsline {section}{\numberline {36}Asymptote: settings}{16}

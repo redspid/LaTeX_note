@@ -523,6 +523,10 @@ labelpath("\scriptsize 现在可以像在 \LaTeX{}
           reverse(rotate(-90)*unitcircle));
 \end{Verbatim}
 
+在源文件头加入设定: \verb+settings.tex=pdflatex+ 可以指定用 pdflatex
+命令编译 label，并直接生成 PDF 的图形，避免默认的编译器造成缺少汉字%
+字体的问题。
+
 \section{Asymptote 的线条连接风格}
 \piccaption{linecap(0、1、2) 三种连接风格\label{connection_style}}
 \parpic(7cm,2cm)[r]{\includegraphics{./figs/connection_style.eps}}
@@ -754,6 +758,13 @@ draw( circle(O, 37mm), 1bp+darkgreen );
 dot(O);
 label( minipage(l, 30mm), (0,0), SE, blue);
 \end{Verbatim}
+
+\section{Asymptote: settings}
+Asymptote 的设定项:
+\begin{itemize}
+	\item settings.outformat="pdf\verb+|+png\verb+|+jpg\ldots" 设定图形格式
+	\item settings.tex="pdflatex" 指定 label 的编译器
+\end{itemize}
 
 
 \end{CJK}

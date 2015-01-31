@@ -392,6 +392,9 @@ labelpath("This is a test of curved labels
           reverse(rotate(-90)*unitcircle));
 \end{Verbatim}
 
+Note: labelpath 中的文字需要用 tex 命令来编译，不能用 pdflatex，
+在使用 CTeX 软件包时就会因中文字体问题导致字符显示不出来。
+
 \section{\LaTeX -Suite hotkey}
 \begin{itemize}
 \item \verb+<F5>+键可自动扩展当前 word 为环境模式(在正文部分)，
@@ -527,6 +530,10 @@ labelpath("\scriptsize 现在可以像在 \LaTeX{}
 命令编译 label，并直接生成 PDF 的图形，避免默认的编译器造成缺少汉字%
 字体的问题。
 
+Note: labelpath 中的文字需要用 tex 命令来编译，不能用 pdflatex，
+在使用 CTeX 软件包时就会因中文字体问题导致字符显示不出来。
+所以仅在不使用 labelpath，只使用 label 的时候用 pdflatex 编译。
+
 \section{Asymptote 的线条连接风格}
 \piccaption{linecap(0、1、2) 三种连接风格\label{connection_style}}
 \parpic(7cm,2cm)[r]{\includegraphics{./figs/connection_style.eps}}
@@ -538,7 +545,7 @@ pen extendcap = linecap(2);
 
 \section{Asymptote: 导入图像文件}
 \verb+string graphic(string name, string options="")+\\
-返回一个可以用来导入 EPS 文件的 string 变量。
+返回一个可以用来导入 EPS 文件的 string 变量(只能导入 EPS 格式文件)。
 
 这里 \Memph{name} 是被导入的 EPS 文件名。
 \Memph{option} 是一个包含下面选项的用逗号分割的参数列表。
@@ -766,7 +773,13 @@ Asymptote 的设定项:
 	\item settings.tex="pdflatex" 指定 label 的编译器
 \end{itemize}
 
+\section{Asymptote: 分页输出}
+\verb+shipout("FileNamePrefix")+
+
+
+
 
 \end{CJK}
+
 \end{document}
 

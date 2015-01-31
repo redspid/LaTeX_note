@@ -1,3 +1,4 @@
+settings.outformat="pdf";
 import markers;
 size(100);
 

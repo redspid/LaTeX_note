@@ -191,12 +191,23 @@ normalsize {\large large} {\Large Large} {\LARGE LARGE}
 \section{纸张尺寸设置}
 \verb+\paperheight=26cm+\\
 \verb+\paperwidth=20cm+\\
-但是当通过 dvipdfm 或 dvipdfmx 将 dvi 文件转换为 pdf 文件的时候%
-这两条指令不起作用。
-此时可在导言区用 \verb+\special{papersize=10cm,20cm}+ 这样的指令来设置。
 
 注意当前的 \verb+\textheight+ 和 \verb+\textwidth+ 设置，
 应在纸张大小的范围内。
+
+\subsection{对于dvips}
+导言区加入: \verb+\special{papersize=<width,heith>}+
+
+\subsection{对于pdftex / pdflatex}
+导言区加入: 
+\begin{verbatim}
+\setlength{\pdfpageheight}{<height>} 
+\setlength{\pdfpagewidth}{<width>} 
+\end{verbatim}
+
+\subsection{对于 dvipdfm(x)}
+导言区加入: \verb+\special{pdf: pagesize width <width> height <height>}+
+
 
 \section{图形和表格目录}
 \verb+\listoffigures+ 指令排版图形目录，\verb+\listfigurename+
@@ -226,7 +237,7 @@ wrapfig 会自动计算图形的高度。不过，我们也可设定图形的高度，
 \usepackage{wrapfig}
 ...
 \begin{wrapfigure}{r}{4.5cm}
-\includegraphics [width=4cm,clip]{yourfigure.eps}
+\includegraphics [width=4cm,clip]{yourfigure.pdf}
 \end{wrapfigure}
 \end{Verbatim}
 
@@ -260,12 +271,12 @@ wrapfig 会自动计算图形的高度。不过，我们也可设定图形的高度，
 	\item [x] 将图形置于一个具有立体效果的盒子中	
 \end{itemize}
 例如图\ref{arrow_show} ``Asymptote 指示箭头'' 一节中使用的插图代码：\\
-\verb+\parpic[r]{\includegraphics[scale=0.7]{arrow_show.eps}}+
+\verb+\parpic[r]{\includegraphics[scale=0.7]{arrow_show.pdf}}+
 
 用下面的代码为混排的图片增加 caption 和 label ：
 \begin{Verbatim}
 \piccaption{yourcaption\label{yourlabel}}
-\parpic[r]{\includegraphics{show.eps}}
+\parpic[r]{\includegraphics{show.pdf}}
 \end{Verbatim}
 
 可在 \verb+\parpic+ 指令后面的小括号内设置图片所占空间大小%
@@ -274,7 +285,7 @@ wrapfig 会自动计算图形的高度。不过，我们也可设定图形的高度，
 插入图\ref{string_label}的代码如下：
 \begin{Verbatim}
 \piccaption{Asymptote 文字外框\label{string_label}}
-\parpic(5cm,3cm)[r]{\includegraphics{string_label.eps}}
+\parpic(5cm,3cm)[r]{\includegraphics{string_label.pdf}}
 \end{Verbatim}
 
 \section{堆叠符号}
@@ -305,7 +316,7 @@ wrapfig 会自动计算图形的高度。不过，我们也可设定图形的高度，
 
 \section{Asymptote 指示箭头}
 \piccaption{Asymptote 指示箭头演示图\label{arrow_show}}
-\parpic[r]{\includegraphics[scale=0.7]{./figs/arrow_show.eps}}
+\parpic[r]{\includegraphics[scale=0.7]{./figs/arrow_show.pdf}}
 \begin{Verbatim}
 size(10cm,0);
 texpreamble("\usepackage{amsmath}");
@@ -346,7 +357,7 @@ filetype indent on
 
 \section{Asymptote 带边框的文字}
 \piccaption{Asymptote 文字外框\label{string_label}}
-\parpic(5cm,3cm)[r]{\includegraphics{./figs/string_label.eps}}
+\parpic(5cm,3cm)[r]{\includegraphics{./figs/string_label.pdf}}
 \verb+point(object, -1)+为对象左连接点，
 \verb+point(object, 1)+为对象右连接点。
 \begin{Verbatim}
@@ -377,7 +388,7 @@ All other Label transforms are ignored. This package requires
 the latex tex engine and inherits the limitations of the
 PSTricks \verb+\pstextpath+ macro.
 \piccaption{labelpath 示例\label{label_path}}
-\parpic[r]{\includegraphics{./figs/label_path.eps}}
+\parpic[r]{\includegraphics{./figs/label_path.pdf}}
 
 Note: 源码文件命名的时候不能与代码中导入的 module 同名，
 否则可能被编译器认为是递归调用 module 。
@@ -471,7 +482,7 @@ $\Delta{}\ \Gamma{}\ \Phi{}\ \Lambda{}\ \Xi{}\ \Theta{}\ \Psi{}\ %
 
 \section{Asymptote: 轴对称变换}
 \piccaption{轴对称变换\label{asy_reflect}}
-\parpic[r]{\includegraphics{./figs/reflect.eps}}
+\parpic[r]{\includegraphics{./figs/reflect.pdf}}
 \begin{Verbatim}
 size(4cm);
 import graph;
@@ -493,7 +504,7 @@ draw((0,0)--(2,2), drawpen);
 \vspace{4mm}
 函数原型：
 \piccaption{标记角度\label{asy_angle}}
-\parpic[r]{\includegraphics{./figs/angle.eps}}
+\parpic[r]{\includegraphics{./figs/angle.pdf}}
 \begin{Verbatim}
 void markangle(picture pic=currentpicture, Label L="",
                int n=1, real radius=0, real space=0,
@@ -514,7 +525,7 @@ markangle("\angle BOA", B, origin, A, Arrow, linewidth(bp));
 Asymptote 使用 \TeX{} 处理中文，
 按图\ref{asy_chinese}中这样在生成的图像中使用中文：
 \piccaption{在 Asymptote 中使用中文\label{asy_chinese}}
-\parpic(5.5cm,3cm)[r]{\includegraphics{./figs/chinese.eps}}
+\parpic(5.5cm,3cm)[r]{\includegraphics{./figs/chinese.pdf}}
 \begin{Verbatim}
 import labelpath;
 size(100);
@@ -536,7 +547,7 @@ Note: labelpath 中的文字需要用 tex 命令来编译，不能用 pdflatex，
 
 \section{Asymptote 的线条连接风格}
 \piccaption{linecap(0、1、2) 三种连接风格\label{connection_style}}
-\parpic(7cm,2cm)[r]{\includegraphics{./figs/connection_style.eps}}
+\parpic(7cm,2cm)[r]{\includegraphics{./figs/connection_style.pdf}}
 \begin{Verbatim}
 pen squarecap = linecap(0);
 pen roundcap = linecap(1);
@@ -551,7 +562,7 @@ pen extendcap = linecap(2);
 \Memph{option} 是一个包含下面选项的用逗号分割的参数列表。
 \begin{itemize}
 \piccaption{Asymptote 导入图像文件\label{input_fig}}
-\parpic(6cm,4.5cm)[r]{\includegraphics{./figs/input_fig.eps}}
+\parpic(6cm,4.5cm)[r]{\includegraphics{./figs/input_fig.pdf}}
 	\item (bb=llx lly urx ury) bounding box
 	\item (width=value) width
 	\item (height=value) height
@@ -601,7 +612,7 @@ draw(circle((0,-13), 42), linewidth(bp)+red);
 \verb+slice lastcut(path p, path knife);+
 等价于 \verb+cut(p, knife, -1);+ 。
 \piccaption{cut 函数和 sturct slice 示例\label{cut_slice}}
-\parpic(7cm, 3cm)[r]{\includegraphics{./figs/cut_slice.eps}}
+\parpic(7cm, 3cm)[r]{\includegraphics{./figs/cut_slice.pdf}}
 示例代码(图\ref{cut_slice}):
 \begin{Verbatim}
 size(150); import graph; defaultpen(2bp);
@@ -618,7 +629,7 @@ draw("$sin(x)$.after", k.after, S, red);
 \section{Asymptote 颜色名称}
 \begin{figure}[htpb]
 \centering
-\includegraphics[scale=0.7]{./figs/asy_color.eps}
+\includegraphics[scale=0.7]{./figs/asy_color.pdf}
 \caption{Asymptote 颜色名称}
 \label{fig:asy_color}
 \end{figure}
@@ -629,7 +640,7 @@ $\to$pale 。
 如图\ref{fig:asy_color2}所示：
 \begin{figure}[htpb]
 \centering
-\includegraphics[scale=0.7]{./figs/asy_color2.eps}
+\includegraphics[scale=0.7]{./figs/asy_color2.pdf}
 \caption{颜色由深到浅的修饰词}
 \label{fig:asy_color2}
 \end{figure}
@@ -647,7 +658,7 @@ dot大小由linewidth() 或 dotfactor 设定)。
 这就是\verb+UnFill(real)+的设置过大。
 
 \piccaption{字体.Arrow.UnFill\\大小设置\label{dot_label_tick}}
-\parpic[r]{\includegraphics[width=0.4\textwidth]{./figs/dot_label_tick.eps}}
+\parpic[r]{\includegraphics[width=0.4\textwidth]{./figs/dot_label_tick.pdf}}
 \begin{Verbatim}
 import graph;
 size(200,0);
@@ -750,13 +761,11 @@ eurosym 宏包：
 \end{document}
 \end{Verbatim}
 
-% next section insert here.
-\newpage
 
 \section{Asymptote: 多行文本的 label}
 需要在图中使用多行文本，可以用 minipage 函数:
 \piccaption{Asymptote 导入图像文件\label{label_muti_lines}}
-\parpic(4.3cm,4.3cm)[r]{\includegraphics[width=3.9cm]{./figs/label_muti_lines.eps}}
+\parpic(4.3cm,4.3cm)[r]{\includegraphics[width=3.9cm]{./figs/label_muti_lines.pdf}}
 \begin{Verbatim}
 pair O=(0,0);
 string l = "I want to write many lines of comments

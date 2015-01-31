@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 size(4cm);
 import graph;
 pen drawpen = linewidth(bp);

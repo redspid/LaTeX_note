@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 unitsize(mm);
 
 pen[] c = {gray, fuchsia, salmon, pink, magenta, chartreuse, darkgreen,

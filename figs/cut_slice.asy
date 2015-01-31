@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 size(150);
 import graph;
 defaultpen(2bp);

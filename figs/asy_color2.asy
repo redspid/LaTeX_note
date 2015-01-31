@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 unitsize(1.2mm);
 
 pen[] c = {darkred, deepred, heavyred, red, mediumred, lightred, palered};

@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 size(10cm,0);
 texpreamble("\usepackage{amsmath}");
 

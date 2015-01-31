@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 import graph;
 size(200,0);
 defaultpen(1bp+red); //设定默认pen直径和颜色

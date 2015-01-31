@@ -26,7 +26,7 @@
 	</mapper>
 
 	<target name="compile" depends="init">
-		<apply executable="latex">
+		<apply executable="pdflatex">
 			<fileset dir="." includes="${src}">
 				<depend targetdir=".">
 					<mapper refid="tex2pdf"/>
@@ -38,8 +38,8 @@
 		<available file="${toc}" property="again"/>
 	</target>
 
-	<target name="compile_again" if="again" depends="compile">
-		<apply executable="latex">
+	<target name="pdf" if="again" depends="compile">
+		<apply executable="pdflatex">
 			<fileset dir="." includes="${src}">
 				<depend targetdir=".">
 					<mapper refid="tex2pdf"/>
@@ -47,17 +47,6 @@
 			</fileset>
 		</apply>
 		<echo>twice compile success.</echo>
-	</target>
-
-	<target name="pdf" depends="compile_again">
-		<sleep seconds="1"/>
-		<apply executable="dvipdfmx">
-			<fileset dir="." includes="${dvi}">
-				<depend targetdir="." granularity="100">
-					<mapper type="glob" from="*.dvi" to="*.pdf"/>
-				</depend>
-			</fileset>
-		</apply>
 	</target>
 
 	<fileset id="tmp_file" dir="." includes="*.log,*.dvi,*.aux,*.toc,*.lof"/>

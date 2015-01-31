@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 defaultpen(linewidth(13bp)+grey);
 pair A=(50,50), B=(0,25), C=(50,0);
 path p = A--B--C;

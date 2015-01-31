@@ -1,3 +1,5 @@
+settings.outformat="pdf";
+
 import labelpath;
 size(100);
 

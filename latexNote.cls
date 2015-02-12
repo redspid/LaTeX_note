@@ -2,11 +2,11 @@
 \ProvidesClass{latexNote}[2009/07/01 for latex note]
 \LoadClass[a4paper,11pt]{article}
 
-\voffset=-2.5cm
-\hoffset=-1.8cm
-\textwidth=16.5cm
-\textheight=25.6cm
-\parindent=2em
+\setlength{\voffset}{-2.5cm}
+\setlength{\hoffset}{-1.8cm}
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{25.6cm}
+\setlength{\parindent}{2em}
 \linespread{1.2}
 
 \RequirePackage{CJK}

@@ -129,6 +129,8 @@ CJK 会在两个汉字间插入一个 \verb+\CJKglue+，
 
 CJK 的默认值是 \verb+\hskip 0pt plus 0.08\baselineskip+ 。
 
+CJK环境中改字体命令: \verb+\CJKfamily{fontName}+
+
 \section{首段缩进 和 段首缩进}
 \verb+\usepackage{indentfirst}+ 宏包可指定首段缩进。
 
@@ -784,6 +786,21 @@ Asymptote 的设定项:
 
 \section{Asymptote: 分页输出}
 \verb+shipout("FileNamePrefix")+
+
+\section{Asymptote: tips}
+变量名冲突: E S W N，是预定义变量，避免作为自定义变量使用。
+
+Transform 顺序:  \verb+transform * Lable;+
+
+\section{在宏包中使用 CJK 包}
+\begin{verbatim}
+\RequirePackage{CJK}
+\AtBeginDocument{\begin{CJK}{GBK}{fs}}
+\AtEndDocument{\clearpage\end{CJK}}
+\end{verbatim}
+
+在\verb+\end{CJK}+前需加\verb+\clearpage+，否则编译器会报错。
+
 
 
 

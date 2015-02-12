@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {9.1}对于dvips}{7}
 \contentsline {subsection}{\numberline {9.2}对于pdftex / pdflatex}{7}
 \contentsline {subsection}{\numberline {9.3}对于 dvipdfm(x)}{7}
-\contentsline {section}{\numberline {10}图形和表格目录}{7}
+\contentsline {section}{\numberline {10}图形和表格目录}{8}
 \contentsline {section}{\numberline {11}图文混排}{8}
 \contentsline {subsection}{\numberline {11.1}wrapfig 宏包}{8}
 \contentsline {subsection}{\numberline {11.2}picins 宏包}{8}
@@ -50,3 +50,5 @@
 \contentsline {section}{\numberline {35}Asymptote: 多行文本的 label}{17}
 \contentsline {section}{\numberline {36}Asymptote: settings}{18}
 \contentsline {section}{\numberline {37}Asymptote: 分页输出}{18}
+\contentsline {section}{\numberline {38}Asymptote: tips}{18}
+\contentsline {section}{\numberline {39}在宏包中使用 CJK 包}{18}

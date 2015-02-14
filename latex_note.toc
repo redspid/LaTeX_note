@@ -52,3 +52,4 @@
 \contentsline {section}{\numberline {37}Asymptote: 分页输出}{18}
 \contentsline {section}{\numberline {38}Asymptote: tips}{18}
 \contentsline {section}{\numberline {39}在宏包中使用 CJK 包}{18}
+\contentsline {section}{\numberline {40}常用宏包}{18}

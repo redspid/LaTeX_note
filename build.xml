@@ -14,7 +14,7 @@
 				<exclude name="asy_color.asy"/>
 
 				<depend targetdir="figs" granularity="100">
-					<mapper type="glob" from="*.asy" to="*.eps"/>
+					<mapper type="glob" from="*.asy" to="*.pdf"/>
 				</depend>
 			</fileset>
 		</apply>

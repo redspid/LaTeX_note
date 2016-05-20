@@ -1,6 +1,5 @@
 \documentclass[a4paper,11pt]{article}
 % Created: 2008-7-1
-% Last Change: 2011-02-01 16:41:08
 \input{MyLayout.tex}
 \usepackage{CJK}
 \usepackage{setspace,amssymb,bbding,wasysym,eurosym,textcomp,graphicx}
@@ -788,9 +787,26 @@ Asymptote 的设定项:
 \verb+shipout("FileNamePrefix")+
 
 \section{Asymptote: tips}
+\subsection{变量名冲突}
 变量名冲突: E S W N，是预定义变量，避免作为自定义变量使用。
 
+\subsection{语法}
 Transform 顺序:  \verb+transform * Lable;+
+
+\subsection{pair 赋值默认行为}
+对 pair 变量赋值时，若直接用一个数字，则 y 坐标默认为0 。
+\begin{Verbatim}
+pair origin = 0;    // origin = (0,0)
+pair A = 7;    // A = (7,0)
+\end{Verbatim}
+
+\subsection{颜色计算}
+颜色可以与 real 相乘， $real\in [0,1]$ ，乘以$0$是黑色，乘以$1$是本色。
+\begin{Verbatim}
+0.5*red;
+0.9*yellow;
+\end{Verbatim}
+
 
 \section{在宏包中使用 CJK 包}
 \begin{verbatim}

@@ -51,4 +51,8 @@
 \contentsline {section}{\numberline {36}Asymptote: settings}{18}
 \contentsline {section}{\numberline {37}Asymptote: 分页输出}{18}
 \contentsline {section}{\numberline {38}Asymptote: tips}{18}
+\contentsline {subsection}{\numberline {38.1}变量名冲突}{18}
+\contentsline {subsection}{\numberline {38.2}语法}{18}
+\contentsline {subsection}{\numberline {38.3}pair 赋值默认行为}{18}
+\contentsline {subsection}{\numberline {38.4}颜色计算}{18}
 \contentsline {section}{\numberline {39}在宏包中使用 CJK 包}{18}

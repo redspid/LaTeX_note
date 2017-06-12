@@ -22,7 +22,7 @@
 \begin{CJK}{GBK}{fs}
 \RequirePackage{color}
 
-\renewcommand{\figurename}{ͼ}
+\renewcommand{\figurename}{图}
 
 \RecustomVerbatimEnvironment{Verbatim}{Verbatim}{%
 frame=leftline, framerule=0.5mm, xleftmargin=2em,%

@@ -1,16 +1,19 @@
 \documentclass[a4paper,11pt]{article}
 % Created: 2008-7-1
 \input{MyLayout.tex}
-\usepackage{CJK}
-\usepackage{setspace,amssymb,bbding,wasysym,eurosym,textcomp,graphicx}
+\usepackage{hologo}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont{FangSong}
+\setCJKmonofont{FangSong}
+\usepackage{setspace,amssymb,bbding,wasysym,eurosym,textcomp,graphicx,xpinyin}
 \usepackage{fancyvrb}
 \usepackage{picins}
-\begin{CJK}{GBK}{fs}
 \usepackage{color}
-% 2008Äê7ÔÂ13ÈÕ20:42:06 ±êÌâÖĞµÄ``MetaPost'' ¸Ä³ÉÁË ``Asymptote''.
-% MetaPost ¶Ï¶ÏĞøĞø¿´ÁËºÃ³¤Ê±¼ä»¹ÊÇÏ¡ÀïºıÍ¿£¬
-% ÎŞÒâÖĞ·¢ÏÖÁË Asymptote ±È½ÏºÏÎÒµÄÎ¸¿Ú£¬
-% C++ µÄÓï·¨¿´ÆğÀ´ºÜÊìÏ¤£¬Àí½âÆğÀ´Ò²ÈİÒ×¶àÁË¡£
+% 2008å¹´7æœˆ13æ—¥20:42:06 æ ‡é¢˜ä¸­çš„``MetaPost'' æ”¹æˆäº† ``Asymptote''.
+% MetaPost æ–­æ–­ç»­ç»­çœ‹äº†å¥½é•¿æ—¶é—´è¿˜æ˜¯ç¨€é‡Œç³Šæ¶‚ï¼Œ
+% æ— æ„ä¸­å‘ç°äº† Asymptote æ¯”è¾ƒåˆæˆ‘çš„èƒƒå£ï¼Œ
+% C++ çš„è¯­æ³•çœ‹èµ·æ¥å¾ˆç†Ÿæ‚‰ï¼Œç†è§£èµ·æ¥ä¹Ÿå®¹æ˜“å¤šäº†ã€‚
 
 \input{MyCommand.tex}
 
@@ -49,101 +52,101 @@ responsible for all changes to these systems for the rest of my life.''
 \listoffigures
 
 \newpage
-\section{Ê²Ã´ÊÇÎÄ¼şÃûÊı¾İ¿â£¿ÔõÑùË¢ĞÂ£¿}
-\TeX{} ÏµÍ³Í¨¹ıÕâ¸öÊı¾İ¿â¼ÇÂ¼ÁËËùĞèÒªµÄ¸÷ÖÖÎÄ¼şµÄÃû×ÖºÍ¾ßÌåÄ¿Â¼Î»ÖÃ¡£
-Ã¿´ÎÏò \TeX{} ÏµÍ³ÖĞÌí¼ÓÎÄ¼şºó£¬¶¼Òª¼ÇµÃË¢ĞÂÕâ¸öÊı¾İ¿â£¬
-·ñÔò \TeX{} ÓĞ¿ÉÄÜÕÒ²»µ½ĞèÒªµÄÎÄ¼ş¡£
+\section{ä»€ä¹ˆæ˜¯æ–‡ä»¶åæ•°æ®åº“ï¼Ÿæ€æ ·åˆ·æ–°ï¼Ÿ}
+\TeX{} ç³»ç»Ÿé€šè¿‡è¿™ä¸ªæ•°æ®åº“è®°å½•äº†æ‰€éœ€è¦çš„å„ç§æ–‡ä»¶çš„åå­—å’Œå…·ä½“ç›®å½•ä½ç½®ã€‚
+æ¯æ¬¡å‘ \TeX{} ç³»ç»Ÿä¸­æ·»åŠ æ–‡ä»¶åï¼Œéƒ½è¦è®°å¾—åˆ·æ–°è¿™ä¸ªæ•°æ®åº“ï¼Œ
+å¦åˆ™ \TeX{} æœ‰å¯èƒ½æ‰¾ä¸åˆ°éœ€è¦çš„æ–‡ä»¶ã€‚
 
-Ë¢ĞÂÎÄ¼şÃûÊı¾İ¿âµÄ¾ßÌåÃüÁîÈ¡¾öÓÚµ±Ç°µÄ \TeX{} ÏµÍ³¡£
-te\TeX{} ºÍ fp\TeX{} µÄÃüÁîÊÇ£º\Memph{texhash}
+åˆ·æ–°æ–‡ä»¶åæ•°æ®åº“çš„å…·ä½“å‘½ä»¤å–å†³äºå½“å‰çš„ \TeX{} ç³»ç»Ÿã€‚
+te\TeX{} å’Œ fp\TeX{} çš„å‘½ä»¤æ˜¯ï¼š\Memph{texhash}
 
-MiK\TeX{} ÏµÍ³¿ÉÒÔÔÚÃüÁîĞĞ´°¿ÚÊäÈë \verb+initexmf --update-fndb+
+MiK\TeX{} ç³»ç»Ÿå¯ä»¥åœ¨å‘½ä»¤è¡Œçª—å£è¾“å…¥ \verb+initexmf --update-fndb+
 
-\section{ÈçºÎ°²×°ºê°ü}
-Èç¹ûµÃµ½µÄºê°üÊÇÒÑ¾­±àÒë¹ıµÄ£¬Ò²¾ÍÊÇÒÑ¾­ÓĞ \verb+.sty+ »òÕß \verb+.cls+
-ÎÄ¼ş£¬Ö»Ğè°ÑÕâĞ©ÎÄ¼ş·ÅÔÚ \verb+localtexmf\tex\latex\+ ÏÂµÄÄ³¸ö×ÓÄ¿Â¼ÖĞ£¬
-¿ÉÒÔ×Ô¼º½¨Ò»¸ö¡£È»ºó»¹ÒªÈÃ \TeX{} ÖªµÀÕâ¸öĞÂµÄºê°üµÄ´æÔÚ£¬
-ĞèÒªË¢ĞÂ \TeX{} ÏµÍ³µÄÎÄ¼şÃûÊı¾İ¿â¡£ÏÖÔÚÄã¿ÉÒÔÊ¹ÓÃÕâ¸öºê°üÁË¡£
+\section{å¦‚ä½•å®‰è£…å®åŒ…}
+å¦‚æœå¾—åˆ°çš„å®åŒ…æ˜¯å·²ç»ç¼–è¯‘è¿‡çš„ï¼Œä¹Ÿå°±æ˜¯å·²ç»æœ‰ \verb+.sty+ æˆ–è€… \verb+.cls+
+æ–‡ä»¶ï¼Œåªéœ€æŠŠè¿™äº›æ–‡ä»¶æ”¾åœ¨ \verb+localtexmf\tex\latex\+ ä¸‹çš„æŸä¸ªå­ç›®å½•ä¸­ï¼Œ
+å¯ä»¥è‡ªå·±å»ºä¸€ä¸ªã€‚ç„¶åè¿˜è¦è®© \TeX{} çŸ¥é“è¿™ä¸ªæ–°çš„å®åŒ…çš„å­˜åœ¨ï¼Œ
+éœ€è¦åˆ·æ–° \TeX{} ç³»ç»Ÿçš„æ–‡ä»¶åæ•°æ®åº“ã€‚ç°åœ¨ä½ å¯ä»¥ä½¿ç”¨è¿™ä¸ªå®åŒ…äº†ã€‚
 
-Ò²¿ÉÒÔ°ÑÕâĞ©ºê°üÎÄ¼şºÍÒª±à¼­µÄ \TeX{} Ô´ÎÄ¼ş·ÅÔÚÍ¬Ò»Ä¿Â¼ÏÂ£¬
-ÕâÖÖÇé¿öÏÂ²»ĞèÒªË¢ĞÂ \TeX{} ÏµÍ³µÄÎÄ¼şÃûÊı¾İ¿â£¬
-µ«Ö»ÓĞÍ¬Ò»¸öÄ¿Â¼ÏÂµÄÎÄ¼ş¿ÉÒÔÊ¹ÓÃÕâĞ©ºê°ü¡£
+ä¹Ÿå¯ä»¥æŠŠè¿™äº›å®åŒ…æ–‡ä»¶å’Œè¦ç¼–è¾‘çš„ \TeX{} æºæ–‡ä»¶æ”¾åœ¨åŒä¸€ç›®å½•ä¸‹ï¼Œ
+è¿™ç§æƒ…å†µä¸‹ä¸éœ€è¦åˆ·æ–° \TeX{} ç³»ç»Ÿçš„æ–‡ä»¶åæ•°æ®åº“ï¼Œ
+ä½†åªæœ‰åŒä¸€ä¸ªç›®å½•ä¸‹çš„æ–‡ä»¶å¯ä»¥ä½¿ç”¨è¿™äº›å®åŒ…ã€‚
 
-Èç¹ûµÃµ½µÄÊÇºê°üµÄÔ´ÎÄ¼ş£¬Ò»°ãÀ´Ëµ¶¼°üº¬Á½¸öÎÄ¼ş£º
-Ò»¸öÀ©Õ¹ÃûÎª \verb+.ins+ £¬ÁíÒ»¸öÀ©Õ¹ÃûÎª \verb+.dtx+ ¡£
-´ËÍâ£¬Í¨³£»áÓĞÒ»¸ö \verb+readme.txt+ ¶Ôºê°ü½øĞĞ¼òÒªµÄËµÃ÷¡£
-ÏÖÔÚĞèÒªÁ½¸ö²½Öè½«Ëü°²×°µ½ \TeX{} ÏµÍ³ÖĞ£º
-\subsection{Éú³ÉÑùÊ½ÎÄ¼ş²¢×°ÈëÏµÍ³}
+å¦‚æœå¾—åˆ°çš„æ˜¯å®åŒ…çš„æºæ–‡ä»¶ï¼Œä¸€èˆ¬æ¥è¯´éƒ½åŒ…å«ä¸¤ä¸ªæ–‡ä»¶ï¼š
+ä¸€ä¸ªæ‰©å±•åä¸º \verb+.ins+ ï¼Œå¦ä¸€ä¸ªæ‰©å±•åä¸º \verb+.dtx+ ã€‚
+æ­¤å¤–ï¼Œé€šå¸¸ä¼šæœ‰ä¸€ä¸ª \verb+readme.txt+ å¯¹å®åŒ…è¿›è¡Œç®€è¦çš„è¯´æ˜ã€‚
+ç°åœ¨éœ€è¦ä¸¤ä¸ªæ­¥éª¤å°†å®ƒå®‰è£…åˆ° \TeX{} ç³»ç»Ÿä¸­ï¼š
+\subsection{ç”Ÿæˆæ ·å¼æ–‡ä»¶å¹¶è£…å…¥ç³»ç»Ÿ}
 \begin{enumerate}
-	\item ¶Ô \verb+.ins+ ÔËĞĞ \LaTeX{} ÃüÁî¡£
-		Õâ½«»á²úÉúÒ»¸ö»òÈô¸É¸ö \verb+.sty+ ÎÄ¼ş
-	\item °Ñ \verb+.sty+ ÎÄ¼şÒÆµ½ÏµÍ³ÄÜÕÒµ½µÄµØ·½¡£
-		Í¨³£ÊÇ \verb+.../localtexmf/tex/latex+
-		×ÓÄ¿Â¼ÏÂ(Windows »òÕß OS/2 ÓÃ»§Ó¦¸Ã¸Ä±äĞ±ÏßÎª·´Ğ±Ïß)
-	\item Ë¢ĞÂÏµÍ³µÄÎÄ¼şÃûÊı¾İ¿â¡£²ÎÕÕÉÏÒ»½ÚµÄËµÃ÷
+	\item å¯¹ \verb+.ins+ è¿è¡Œ \LaTeX{} å‘½ä»¤ã€‚
+		è¿™å°†ä¼šäº§ç”Ÿä¸€ä¸ªæˆ–è‹¥å¹²ä¸ª \verb+.sty+ æ–‡ä»¶
+	\item æŠŠ \verb+.sty+ æ–‡ä»¶ç§»åˆ°ç³»ç»Ÿèƒ½æ‰¾åˆ°çš„åœ°æ–¹ã€‚
+		é€šå¸¸æ˜¯ \verb+.../localtexmf/tex/latex+
+		å­ç›®å½•ä¸‹(Windows æˆ–è€… OS/2 ç”¨æˆ·åº”è¯¥æ”¹å˜æ–œçº¿ä¸ºåæ–œçº¿)
+	\item åˆ·æ–°ç³»ç»Ÿçš„æ–‡ä»¶åæ•°æ®åº“ã€‚å‚ç…§ä¸Šä¸€èŠ‚çš„è¯´æ˜
 \end{enumerate}
 
-\subsection{Éú³ÉËµÃ÷ÎÄµµ}
+\subsection{ç”Ÿæˆè¯´æ˜æ–‡æ¡£}
 \begin{enumerate}
-	\item ¶Ô \verb+.dtx+ ÎÄ¼şÔËĞĞ \LaTeX{} ÃüÁî¡£
-		Õâ½«»á²úÉúÒ»¸ö \verb+.dvi+ ÎÄ¼ş¡£
-		×¢Òâ£º¿ÉÄÜĞèÒª¶à´ÎÔËĞĞ \LaTeX{} À´ÕıÈ·´¦Àí½»²æÒıÓÃ
-	\item ¼ì²éÒ»ÏÂ \LaTeX{} ÊÇ·ñ²úÉúÁË \verb+.dvi+ ÎÄ¼ş¡£
-		Èç¹ûÃ»ÓĞ·¢ÏÖÕâ¸öÎÄ¼ş£¬¾Í¿ÉÒÔÖ´ĞĞµÚ 5 ²½ÁË¡£
-	\item ÎªÁËÉú³ÉË÷Òı£¬¼üÈëÃüÁî£º\verb+makeindex -s gind.ins name+
-		(ÕâÀï name ±íÊ¾²»´øÀ©Õ¹ÃûµÄÖ÷ÎÄ¼şÃû)
-	\item ÔÙ´Î¶Ô  \verb+.dtx+ ÎÄ¼şÔËĞĞ \LaTeX{} ÃüÁî¡£
-	\item ×îºóÒ»²½²»ÊÇ±ØĞèµÄ£¬Éú³É \verb+.ps+ ÎÄ¼ş»òÕß \verb+.pdf+
-		ÎÄ¼şÒÔ·½±ãÔÄ¶Á¡£
+	\item å¯¹ \verb+.dtx+ æ–‡ä»¶è¿è¡Œ \LaTeX{} å‘½ä»¤ã€‚
+		è¿™å°†ä¼šäº§ç”Ÿä¸€ä¸ª \verb+.dvi+ æ–‡ä»¶ã€‚
+		æ³¨æ„ï¼šå¯èƒ½éœ€è¦å¤šæ¬¡è¿è¡Œ \LaTeX{} æ¥æ­£ç¡®å¤„ç†äº¤å‰å¼•ç”¨
+	\item æ£€æŸ¥ä¸€ä¸‹ \LaTeX{} æ˜¯å¦äº§ç”Ÿäº† \verb+.dvi+ æ–‡ä»¶ã€‚
+		å¦‚æœæ²¡æœ‰å‘ç°è¿™ä¸ªæ–‡ä»¶ï¼Œå°±å¯ä»¥æ‰§è¡Œç¬¬ 5 æ­¥äº†ã€‚
+	\item ä¸ºäº†ç”Ÿæˆç´¢å¼•ï¼Œé”®å…¥å‘½ä»¤ï¼š\verb+makeindex -s gind.ins name+
+		(è¿™é‡Œ name è¡¨ç¤ºä¸å¸¦æ‰©å±•åçš„ä¸»æ–‡ä»¶å)
+	\item å†æ¬¡å¯¹  \verb+.dtx+ æ–‡ä»¶è¿è¡Œ \LaTeX{} å‘½ä»¤ã€‚
+	\item æœ€åä¸€æ­¥ä¸æ˜¯å¿…éœ€çš„ï¼Œç”Ÿæˆ \verb+.ps+ æ–‡ä»¶æˆ–è€… \verb+.pdf+
+		æ–‡ä»¶ä»¥æ–¹ä¾¿é˜…è¯»ã€‚
 \end{enumerate}
-ÓĞÊ±»á·¢ÏÖÉú³ÉÁËÒ»¸ö \verb+.glo(glossary)+ ÎÄ¼ş¡£
-ÔÚµÚ 4 ²½ºÍµÚ 5 ²½Ö®¼äÔËĞĞÏÂÃæµÄÃüÁî
+æœ‰æ—¶ä¼šå‘ç°ç”Ÿæˆäº†ä¸€ä¸ª \verb+.glo(glossary)+ æ–‡ä»¶ã€‚
+åœ¨ç¬¬ 4 æ­¥å’Œç¬¬ 5 æ­¥ä¹‹é—´è¿è¡Œä¸‹é¢çš„å‘½ä»¤
 \begin{Verbatim}
 makeindex -s gglo.ist -o name.gls name.glo
 \end{Verbatim}
-È·ÈÏÔÚÖ´ĞĞµÚ 5 ²½Ç°×îºó¶Ô \verb+.dtx+ ÎÄ¼şÔËĞĞÒ»±é \LaTeX{} ÃüÁî¡£
+ç¡®è®¤åœ¨æ‰§è¡Œç¬¬ 5 æ­¥å‰æœ€åå¯¹ \verb+.dtx+ æ–‡ä»¶è¿è¡Œä¸€é \LaTeX{} å‘½ä»¤ã€‚
 
-\section{½¨Á¢×Ô¼ºµÄ°ü}
-Èç¹û½¨Á¢ÁËºÜ¶à×Ô¼ºµÄ»·¾³ºÍÃüÁî£¬ÎÄµµµ¼ÑÔ²¿·Ö½«±äµÃºÜ³¤£¬
-ÔÚÕâÖÖÇé¿öÏÂ£¬½¨Á¢Ò»¸öĞÂµÄ \LaTeX{} °üÀ´´æ·ÅËùÓĞ×Ô¶¨ÒåµÄÃüÁîºÍ»·¾³ÊÇÒ»¸ö%
-ºÃµÄ´¦Àí·½Ê½¡£¿ÉÒÔÔÚÎÄµµÖĞÊ¹ÓÃ \verb+\usepackage+ ÃüÁîÀ´ÒıÈëÖĞ¶¨Òåºê°ü%
-ÖĞµÄ»·¾³ºÍÃüÁî¡£
+\section{å»ºç«‹è‡ªå·±çš„åŒ…}
+å¦‚æœå»ºç«‹äº†å¾ˆå¤šè‡ªå·±çš„ç¯å¢ƒå’Œå‘½ä»¤ï¼Œæ–‡æ¡£å¯¼è¨€éƒ¨åˆ†å°†å˜å¾—å¾ˆé•¿ï¼Œ
+åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œå»ºç«‹ä¸€ä¸ªæ–°çš„ \LaTeX{} åŒ…æ¥å­˜æ”¾æ‰€æœ‰è‡ªå®šä¹‰çš„å‘½ä»¤å’Œç¯å¢ƒæ˜¯ä¸€ä¸ª%
+å¥½çš„å¤„ç†æ–¹å¼ã€‚å¯ä»¥åœ¨æ–‡æ¡£ä¸­ä½¿ç”¨ \verb+\usepackage+ å‘½ä»¤æ¥å¼•å…¥ä¸­å®šä¹‰å®åŒ…%
+ä¸­çš„ç¯å¢ƒå’Œå‘½ä»¤ã€‚
 
-Ğ´Ò»¸öºê°üµÄ»ù±¾¹¤×÷¾ÍÊÇ½«ÎÄµµµ¼ÑÔ¸´ÖÆµ½Ò»¸ö·ÖÀëµÄÎÄ¼şÖĞÈ¥£¬
-Õâ¸öÎÄ¼şÒªÒÔ \verb+.sty+ ½áÎ²¡£»¹ĞèÒªÒ»¸öÃüÁî£º
+å†™ä¸€ä¸ªå®åŒ…çš„åŸºæœ¬å·¥ä½œå°±æ˜¯å°†æ–‡æ¡£å¯¼è¨€å¤åˆ¶åˆ°ä¸€ä¸ªåˆ†ç¦»çš„æ–‡ä»¶ä¸­å»ï¼Œ
+è¿™ä¸ªæ–‡ä»¶è¦ä»¥ \verb+.sty+ ç»“å°¾ã€‚è¿˜éœ€è¦ä¸€ä¸ªå‘½ä»¤ï¼š
 \begin{Verbatim}
 \ProvidesPackage{package_name}
 \end{Verbatim}
 
-Õâ¸öÃüÁîÓ¦¸ÃÔÚ°ü¶¨ÒåÔ´ÎÄ¼şµÄ×îÇ°ÃæÊ¹ÓÃ¡£ËüÓÃÓÚ¸æËß \LaTeX{} ºê°üµÄÃû³Æ%
-´Ó¶øÔÊĞí \LaTeX{} ÔÚÄã³¢ÊÔÁ½´ÎÒıÈëÍ¬Ò»¸öºê°üµÄÊ±ºò¸ø³öÒ»¸öÁ¼ºÃµÄ´íÎóĞÅÏ¢¡£
+è¿™ä¸ªå‘½ä»¤åº”è¯¥åœ¨åŒ…å®šä¹‰æºæ–‡ä»¶çš„æœ€å‰é¢ä½¿ç”¨ã€‚å®ƒç”¨äºå‘Šè¯‰ \LaTeX{} å®åŒ…çš„åç§°%
+ä»è€Œå…è®¸ \LaTeX{} åœ¨ä½ å°è¯•ä¸¤æ¬¡å¼•å…¥åŒä¸€ä¸ªå®åŒ…çš„æ—¶å€™ç»™å‡ºä¸€ä¸ªè‰¯å¥½çš„é”™è¯¯ä¿¡æ¯ã€‚
 
-\section{ÔÚ CJK ÖĞÈçºÎµ÷Õûºº×ÖµÄ¼ä¾à}
-CJK »áÔÚÁ½¸öºº×Ö¼ä²åÈëÒ»¸ö \verb+\CJKglue+£¬
-Òò´ËÎÒÃÇĞŞ¸Ä \verb+\CJKglue+ µÄ¶¨Òå¾Í¿ÉÒÔµ÷Õûºº×ÖµÄ¼ä¾à£º
+\section{åœ¨ CJK ä¸­å¦‚ä½•è°ƒæ•´æ±‰å­—çš„é—´è·}
+CJK ä¼šåœ¨ä¸¤ä¸ªæ±‰å­—é—´æ’å…¥ä¸€ä¸ª \verb+\CJKglue+ï¼Œ
+å› æ­¤æˆ‘ä»¬ä¿®æ”¹ \verb+\CJKglue+ çš„å®šä¹‰å°±å¯ä»¥è°ƒæ•´æ±‰å­—çš„é—´è·ï¼š
 \verb+\renewcommand{CJKglue}{\hskip<b>plus<p>minus<m>}+\\
-ÆäÖĞ\verb+<b>+¡¢\verb+<p>+ºÍ\verb+<m>+¶¼ÊÇ \TeX{} ³¤¶È£¬Èç $0.05pt$¡£
-Ö´ĞĞÒÔÉÏÃüÁîºó£¬ºº×ÖµÄ±ê×¼¼ä¾à¾ÍÊÇ\verb+<b>+£¬ÔÚĞèÒªµÄÊ±ºò¿ÉÒÔÔö¼Ó»ò¼õÉÙ£¬
-µ÷Õû·ù¶È·Ö±ğ²»³¬¹ı\verb+<p>+ºÍ\verb+<m>+¡£
+å…¶ä¸­\verb+<b>+ã€\verb+<p>+å’Œ\verb+<m>+éƒ½æ˜¯ \TeX{} é•¿åº¦ï¼Œå¦‚ $0.05pt$ã€‚
+æ‰§è¡Œä»¥ä¸Šå‘½ä»¤åï¼Œæ±‰å­—çš„æ ‡å‡†é—´è·å°±æ˜¯\verb+<b>+ï¼Œåœ¨éœ€è¦çš„æ—¶å€™å¯ä»¥å¢åŠ æˆ–å‡å°‘ï¼Œ
+è°ƒæ•´å¹…åº¦åˆ†åˆ«ä¸è¶…è¿‡\verb+<p>+å’Œ\verb+<m>+ã€‚
 
-CJK µÄÄ¬ÈÏÖµÊÇ \verb+\hskip 0pt plus 0.08\baselineskip+ ¡£
+CJK çš„é»˜è®¤å€¼æ˜¯ \verb+\hskip 0pt plus 0.08\baselineskip+ ã€‚
 
-CJK»·¾³ÖĞ¸Ä×ÖÌåÃüÁî: \verb+\CJKfamily{fontName}+
+CJKç¯å¢ƒä¸­æ”¹å­—ä½“å‘½ä»¤: \verb+\CJKfamily{fontName}+
 
-\section{Ê×¶ÎËõ½ø ºÍ ¶ÎÊ×Ëõ½ø}
-\verb+\usepackage{indentfirst}+ ºê°ü¿ÉÖ¸¶¨Ê×¶ÎËõ½ø¡£
+\section{é¦–æ®µç¼©è¿› å’Œ æ®µé¦–ç¼©è¿›}
+\verb+\usepackage{indentfirst}+ å®åŒ…å¯æŒ‡å®šé¦–æ®µç¼©è¿›ã€‚
 
-article ÎÄµµÀàÄ¬ÈÏÊ×¶ÎËõ½ø 2em £¬´ÓÕıÎÄ¿´¿ÉÄÜ±ÈÁ½¸ö×Ö·ûµÄ¿í¶ÈĞ¡Ò»µã£¬
-ÒòÎªÁ½¸ö×Ö·û¼äÓĞ¸ö¼ä¾à£¬¿ÉÔÚµ¼ÑÔÇøÓÃ \verb+\parindent+ Ö¸Áî×Ô¶¨Òå¶ÎÊ×Ëõ½ø¡£
+article æ–‡æ¡£ç±»é»˜è®¤é¦–æ®µç¼©è¿› 2em ï¼Œä»æ­£æ–‡çœ‹å¯èƒ½æ¯”ä¸¤ä¸ªå­—ç¬¦çš„å®½åº¦å°ä¸€ç‚¹ï¼Œ
+å› ä¸ºä¸¤ä¸ªå­—ç¬¦é—´æœ‰ä¸ªé—´è·ï¼Œå¯åœ¨å¯¼è¨€åŒºç”¨ \verb+\parindent+ æŒ‡ä»¤è‡ªå®šä¹‰æ®µé¦–ç¼©è¿›ã€‚
 
-\section{\LaTeX{}-Suite °²×°}
-\subsection{GNU/Linux¡¢UnixÀà}
+\section{\LaTeX{}-Suite å®‰è£…}
+\subsection{GNU/Linuxã€Unixç±»}
 \begin{spacing}{1}
 \begin{enumerate}
-	\item ´´½¨ \verb+~/.vimrc/+ Ä¿Â¼
-	\item ½« \LaTeX{}-Suite Ñ¹Ëõ°üÖĞÄÚÈİ¸´ÖÆµ½ÆäÖĞ
-	\item ÔÚ \verb+~/.vimrc/.vimrc+ ÖĞÌí¼ÓÏÂÃæ´úÂë(ÒıºÅ¿ªÍ·µÄÊÇ×¢ÊÍĞĞ£¬
-		¿ÉÒÔÉ¾³ı£¬½¨Òé±£Áô)\\
+	\item åˆ›å»º \verb+~/.vimrc/+ ç›®å½•
+	\item å°† \LaTeX{}-Suite å‹ç¼©åŒ…ä¸­å†…å®¹å¤åˆ¶åˆ°å…¶ä¸­
+	\item åœ¨ \verb+~/.vimrc/.vimrc+ ä¸­æ·»åŠ ä¸‹é¢ä»£ç (å¼•å·å¼€å¤´çš„æ˜¯æ³¨é‡Šè¡Œï¼Œ
+		å¯ä»¥åˆ é™¤ï¼Œå»ºè®®ä¿ç•™)\\
 		{\footnotesize
 		\begin{verbatim}
 		" ------------begin latex-suite ---------------
@@ -171,68 +174,68 @@ article ÎÄµµÀàÄ¬ÈÏÊ×¶ÎËõ½ø 2em £¬´ÓÕıÎÄ¿´¿ÉÄÜ±ÈÁ½¸ö×Ö·ûµÄ¿í¶ÈĞ¡Ò»µã£¬
 
 \subsection{Windows}
 \begin{enumerate}
-	\item ½« \LaTeX{}-Suite Ñ¹Ëõ°üÖĞÄÚÈİ¸´ÖÆµ½ \verb+...\vim\vimfiles\+ ÖĞ
-	\item ÔÚ \verb+...\vim\_vimrc\+ ÖĞÌí¼Ó´úÂë(ÓëÉÏĞ¡½ÚÏàÍ¬)
+	\item å°† \LaTeX{}-Suite å‹ç¼©åŒ…ä¸­å†…å®¹å¤åˆ¶åˆ° \verb+...\vim\vimfiles\+ ä¸­
+	\item åœ¨ \verb+...\vim\_vimrc\+ ä¸­æ·»åŠ ä»£ç (ä¸ä¸Šå°èŠ‚ç›¸åŒ)
 \end{enumerate}
 
-\LaTeX{}-Suite ÖĞ¸ø³öµÄÅäÖÃÎÄ¼şÔ¤Éè×´Ì¬ÊÇÈÃ Vim
-ÒÔ´ò¿ªÎÄ¼şµÄÄÚÈİÀ´ÅĞ¶ÏÊÇ·ñ \TeX{} ÎÄ¼ş(ÉÏÃæµÄ´úÂëÎÒÒÑ×öÁËĞŞ¸Ä£¬
-ÒÔÎÄ¼şÃûÅĞ¶Ï´ò¿ªÎÄ¼şµÄÀàĞÍ)£¬ÈôÊÇ£¬Ôòµ÷ÓÃ \LaTeX{}-Suite¡£
+\LaTeX{}-Suite ä¸­ç»™å‡ºçš„é…ç½®æ–‡ä»¶é¢„è®¾çŠ¶æ€æ˜¯è®© Vim
+ä»¥æ‰“å¼€æ–‡ä»¶çš„å†…å®¹æ¥åˆ¤æ–­æ˜¯å¦ \TeX{} æ–‡ä»¶(ä¸Šé¢çš„ä»£ç æˆ‘å·²åšäº†ä¿®æ”¹ï¼Œ
+ä»¥æ–‡ä»¶ååˆ¤æ–­æ‰“å¼€æ–‡ä»¶çš„ç±»å‹)ï¼Œè‹¥æ˜¯ï¼Œåˆ™è°ƒç”¨ \LaTeX{}-Suiteã€‚
 
-\section{×ÖÌåÏà¶Ô´óĞ¡}
-µ±Ç° normalsize ´óĞ¡Îª 12pt ¡£\\
+\section{å­—ä½“ç›¸å¯¹å¤§å°}
+å½“å‰ normalsize å¤§å°ä¸º 12pt ã€‚\\
 {\tiny tiny} {\scriptsize scriptsize} {\footnotesize footnotesize}
 {\small small}
 normalsize {\large large} {\Large Large} {\LARGE LARGE}
 {\huge huge} {\Huge Huge}
 
-\section{\LaTeX{} »­Ïß}
+\section{\LaTeX{} ç”»çº¿}
 \verb+\rule[lift]{width}{height}+
 
-\section{Ö½ÕÅ³ß´çÉèÖÃ}
+\section{çº¸å¼ å°ºå¯¸è®¾ç½®}
 \verb+\paperheight=26cm+\\
 \verb+\paperwidth=20cm+\\
 
-×¢Òâµ±Ç°µÄ \verb+\textheight+ ºÍ \verb+\textwidth+ ÉèÖÃ£¬
-Ó¦ÔÚÖ½ÕÅ´óĞ¡µÄ·¶Î§ÄÚ¡£
+æ³¨æ„å½“å‰çš„ \verb+\textheight+ å’Œ \verb+\textwidth+ è®¾ç½®ï¼Œ
+åº”åœ¨çº¸å¼ å¤§å°çš„èŒƒå›´å†…ã€‚
 
-\subsection{¶ÔÓÚdvips}
-µ¼ÑÔÇø¼ÓÈë: \verb+\special{papersize=<width,heith>}+
+\subsection{å¯¹äºdvips}
+å¯¼è¨€åŒºåŠ å…¥: \verb+\special{papersize=<width,heith>}+
 
-\subsection{¶ÔÓÚpdftex / pdflatex}
-µ¼ÑÔÇø¼ÓÈë: 
+\subsection{å¯¹äºpdftex / pdflatex}
+å¯¼è¨€åŒºåŠ å…¥: 
 \begin{verbatim}
 \setlength{\pdfpageheight}{<height>} 
 \setlength{\pdfpagewidth}{<width>} 
 \end{verbatim}
 
-\subsection{¶ÔÓÚ dvipdfm(x)}
-µ¼ÑÔÇø¼ÓÈë: \verb+\special{pdf: pagesize width <width> height <height>}+
+\subsection{å¯¹äº dvipdfm(x)}
+å¯¼è¨€åŒºåŠ å…¥: \verb+\special{pdf: pagesize width <width> height <height>}+
 
 
-\section{Í¼ĞÎºÍ±í¸ñÄ¿Â¼}
-\verb+\listoffigures+ Ö¸ÁîÅÅ°æÍ¼ĞÎÄ¿Â¼£¬\verb+\listfigurename+
-ÎªÍ¼ĞÎÄ¿Â¼±êÌâ¡£\\
-\verb+\listoftables+ Ö¸ÁîÅÅ°æ±í¸ñÄ¿Â¼£¬\verb+\listtablename+
-Îª±í¸ñÄ¿Â¼±êÌâ¡£
+\section{å›¾å½¢å’Œè¡¨æ ¼ç›®å½•}
+\verb+\listoffigures+ æŒ‡ä»¤æ’ç‰ˆå›¾å½¢ç›®å½•ï¼Œ\verb+\listfigurename+
+ä¸ºå›¾å½¢ç›®å½•æ ‡é¢˜ã€‚\\
+\verb+\listoftables+ æŒ‡ä»¤æ’ç‰ˆè¡¨æ ¼ç›®å½•ï¼Œ\verb+\listtablename+
+ä¸ºè¡¨æ ¼ç›®å½•æ ‡é¢˜ã€‚
 
-\section{Í¼ÎÄ»ìÅÅ}
-\subsection{wrapfig ºê°ü}
-ÓÃ·¨£º%
-\verb+\begin{wrapfigure}{ĞĞÊı}[Î»ÖÃ][³¬³ö³¤¶È]{¿í¶È}<Í¼ĞÎ>\end{wrapfigure}+\\
-ĞĞÊıÊÇÖ¸Í¼ĞÎ¸ß¶ÈËùÕ¼µÄÎÄ±¾ĞĞµÄÊıÄ¿¡£ Èç¹û²»¸ø³ö´ËÑ¡Ïî£¬
-wrapfig »á×Ô¶¯¼ÆËã¡£ Î»ÖÃÊÇÖ¸Í¼ĞÎÏà¶ÔÓÚÎÄ±¾µÄÎ»ÖÃ£¬Ğë¸ø¶¨ÏÂÃæËÄÏîµÄÒ»¸ö¡£
+\section{å›¾æ–‡æ··æ’}
+\subsection{wrapfig å®åŒ…}
+ç”¨æ³•ï¼š%
+\verb+\begin{wrapfigure}{è¡Œæ•°}[ä½ç½®][è¶…å‡ºé•¿åº¦]{å®½åº¦}<å›¾å½¢>\end{wrapfigure}+\\
+è¡Œæ•°æ˜¯æŒ‡å›¾å½¢é«˜åº¦æ‰€å çš„æ–‡æœ¬è¡Œçš„æ•°ç›®ã€‚ å¦‚æœä¸ç»™å‡ºæ­¤é€‰é¡¹ï¼Œ
+wrapfig ä¼šè‡ªåŠ¨è®¡ç®—ã€‚ ä½ç½®æ˜¯æŒ‡å›¾å½¢ç›¸å¯¹äºæ–‡æœ¬çš„ä½ç½®ï¼Œé¡»ç»™å®šä¸‹é¢å››é¡¹çš„ä¸€ä¸ªã€‚
 \begin{itemize}
-	\item {\bf r,R} ±íÊ¾Í¼ĞÎÎ»ÓÚÎÄ±¾µÄÓÒ±ß
-	\item {\bf l,L} ±íÊ¾Í¼ĞÎÎ»ÓÚÎÄ±¾µÄ×ó±ß
-	\item {\bf i,I} ±íÊ¾Í¼ĞÎÎ»ÓÚÒ³Ãæ¿¿ÀïµÄÒ»±ß(ÓÃÔÚË«Ãæ¸ñÊ½Àï)
-	\item {\bf o,O} ±íÊ¾Í¼ĞÎÎ»ÓÚÒ³Ãæ¿¿ÍâµÄÒ»±ß
+	\item {\bf r,R} è¡¨ç¤ºå›¾å½¢ä½äºæ–‡æœ¬çš„å³è¾¹
+	\item {\bf l,L} è¡¨ç¤ºå›¾å½¢ä½äºæ–‡æœ¬çš„å·¦è¾¹
+	\item {\bf i,I} è¡¨ç¤ºå›¾å½¢ä½äºé¡µé¢é é‡Œçš„ä¸€è¾¹(ç”¨åœ¨åŒé¢æ ¼å¼é‡Œ)
+	\item {\bf o,O} è¡¨ç¤ºå›¾å½¢ä½äºé¡µé¢é å¤–çš„ä¸€è¾¹
 \end{itemize}
-³¬³ö³¤¶ÈÊÇÖ¸Í¼ĞÎ³¬³öÎÄ±¾±ß½çµÄ³¤¶È£¬È±Ê¡Îª $0pt$¡£ ¿í¶ÈÔòÖ¸Í¼ĞÎµÄ¿í¶È¡£
-wrapfig »á×Ô¶¯¼ÆËãÍ¼ĞÎµÄ¸ß¶È¡£²»¹ı£¬ÎÒÃÇÒ²¿ÉÉè¶¨Í¼ĞÎµÄ¸ß¶È£¬
-¾ßÌå¿É¼û wrapfig.sty ÄÚµÄËµÃ÷¡£
+è¶…å‡ºé•¿åº¦æ˜¯æŒ‡å›¾å½¢è¶…å‡ºæ–‡æœ¬è¾¹ç•Œçš„é•¿åº¦ï¼Œç¼ºçœä¸º $0pt$ã€‚ å®½åº¦åˆ™æŒ‡å›¾å½¢çš„å®½åº¦ã€‚
+wrapfig ä¼šè‡ªåŠ¨è®¡ç®—å›¾å½¢çš„é«˜åº¦ã€‚ä¸è¿‡ï¼Œæˆ‘ä»¬ä¹Ÿå¯è®¾å®šå›¾å½¢çš„é«˜åº¦ï¼Œ
+å…·ä½“å¯è§ wrapfig.sty å†…çš„è¯´æ˜ã€‚
 
-Àı£º
+ä¾‹ï¼š
 \begin{Verbatim}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -242,81 +245,132 @@ wrapfig »á×Ô¶¯¼ÆËãÍ¼ĞÎµÄ¸ß¶È¡£²»¹ı£¬ÎÒÃÇÒ²¿ÉÉè¶¨Í¼ĞÎµÄ¸ß¶È£¬
 \end{wrapfigure}
 \end{Verbatim}
 
-\subsection{picins ºê°ü}
-ÓÃ·¨£º%
-\verb+\parpic(¿í¶È,¸ß¶È)(Ë®Æ½Æ«ÒÆ,´¹Ö±Æ«ÒÆ)[Ñ¡Ïî][Î»ÖÃ]{Í¼ĞÎ}+
+\subsection{picins å®åŒ…}
+ç”¨æ³•ï¼š%
+\verb+\parpic(å®½åº¦,é«˜åº¦)(æ°´å¹³åç§»,å‚ç›´åç§»)[é€‰é¡¹][ä½ç½®]{å›¾å½¢}+
 
-{\bf Î»ÖÃ}Ö»ÄÜÎªÏÂÃæÁ½¸öÖĞµÄÒ»¸ö
+{\bf ä½ç½®}åªèƒ½ä¸ºä¸‹é¢ä¸¤ä¸ªä¸­çš„ä¸€ä¸ª
 \begin{itemize}
-	\item [l] ½«Í¼ĞÎÖÃÓÚÎÄ±¾¶ÎÂäµÄ×ó·½(ÕâÒ²ÊÇÈ±Ê¡Öµ)
-	\item [r] ½«Í¼ĞÎÖÃÓÚÎÄ±¾¶ÎÂäµÄÓÒ·½
+	\item [l] å°†å›¾å½¢ç½®äºæ–‡æœ¬æ®µè½çš„å·¦æ–¹(è¿™ä¹Ÿæ˜¯ç¼ºçœå€¼)
+	\item [r] å°†å›¾å½¢ç½®äºæ–‡æœ¬æ®µè½çš„å³æ–¹
 \end{itemize}
 
-{\bf Íâ¹Û}Ö»ÄÜÎªÏÂÃæÎå¸öÖĞµÄÒ»¸ö£¬¿ÉÓëÉÏÊöÎ»ÖÃÏîÅäºÏÊ¹ÓÃ
+{\bf å¤–è§‚}åªèƒ½ä¸ºä¸‹é¢äº”ä¸ªä¸­çš„ä¸€ä¸ªï¼Œå¯ä¸ä¸Šè¿°ä½ç½®é¡¹é…åˆä½¿ç”¨
 \begin{itemize}
-	\item [f] ½«Í¼ĞÎÖÃÓÚÒ»¸öÊµ¿òºĞ×ÓÖĞ
-	\item [d] ½«Í¼ĞÎÖÃÓÚÒ»¸öĞé¿òºĞ×ÓÖĞ
-	\item [o] ½«Í¼ĞÎÖÃÓÚÒ»¸öÔ²½Ç¿òºĞ×ÓÖĞ
-	\item [s] ½«Í¼ĞÎÖÃÓÚÒ»¸ö¾ßÓĞÒõÓ°Ğ§¹ûµÄºĞ×ÓÖĞ
-	\item [x] ½«Í¼ĞÎÖÃÓÚÒ»¸ö¾ßÓĞÁ¢ÌåĞ§¹ûµÄºĞ×ÓÖĞ	
+	\item [f] å°†å›¾å½¢ç½®äºä¸€ä¸ªå®æ¡†ç›’å­ä¸­
+	\item [d] å°†å›¾å½¢ç½®äºä¸€ä¸ªè™šæ¡†ç›’å­ä¸­
+	\item [o] å°†å›¾å½¢ç½®äºä¸€ä¸ªåœ†è§’æ¡†ç›’å­ä¸­
+	\item [s] å°†å›¾å½¢ç½®äºä¸€ä¸ªå…·æœ‰é˜´å½±æ•ˆæœçš„ç›’å­ä¸­
+	\item [x] å°†å›¾å½¢ç½®äºä¸€ä¸ªå…·æœ‰ç«‹ä½“æ•ˆæœçš„ç›’å­ä¸­	
 \end{itemize}
 
-{\bf Î»ÖÃ}½öµ±¸ø¶¨µÄ¿í¶ÈºÍ¸ß¶ÈÓëÍ¼ĞÎµÄÊµ¼Ê´óĞ¡Ïà²îºÜ´óµÄÇé¿öÏÂ²ÅÆğ×÷ÓÃ¡£
-ÈôË°Æ±»î´¹Ö±Æ«ÒÆÒÑ¸ø³ö£¬ÄÇÃ´´ËÏîÒ²²»Æğ×÷ÓÃ¡£
-È±Ê¡Î»ÖÃÊÇ½«Í¼ĞÎÖÃÓÚºĞ×ÓµÄÖĞÑë¡£Ò²¿ÉÒÔÈ¡ÒÔÏÂµÄÖµ£º
+{\bf ä½ç½®}ä»…å½“ç»™å®šçš„å®½åº¦å’Œé«˜åº¦ä¸å›¾å½¢çš„å®é™…å¤§å°ç›¸å·®å¾ˆå¤§çš„æƒ…å†µä¸‹æ‰èµ·ä½œç”¨ã€‚
+è‹¥ç¨ç¥¨æ´»å‚ç›´åç§»å·²ç»™å‡ºï¼Œé‚£ä¹ˆæ­¤é¡¹ä¹Ÿä¸èµ·ä½œç”¨ã€‚
+ç¼ºçœä½ç½®æ˜¯å°†å›¾å½¢ç½®äºç›’å­çš„ä¸­å¤®ã€‚ä¹Ÿå¯ä»¥å–ä»¥ä¸‹çš„å€¼ï¼š
 \begin{itemize}
-	\item [l] ½«Í¼ĞÎÖÃºĞ×ÓµÄ×ó·½
-	\item [r] ½«Í¼ĞÎÖÃÓÚºĞ×ÓµÄÓÒ·½
-	\item [t] ½«Í¼ĞÎÖÃÓÚºĞ×ÓµÄÉÏ·½
-	\item [b] ½«Í¼ĞÎÖÃÓÚºĞ×ÓµÄÏÂ·½
-	\item [x] ½«Í¼ĞÎÖÃÓÚÒ»¸ö¾ßÓĞÁ¢ÌåĞ§¹ûµÄºĞ×ÓÖĞ	
+	\item [l] å°†å›¾å½¢ç½®ç›’å­çš„å·¦æ–¹
+	\item [r] å°†å›¾å½¢ç½®äºç›’å­çš„å³æ–¹
+	\item [t] å°†å›¾å½¢ç½®äºç›’å­çš„ä¸Šæ–¹
+	\item [b] å°†å›¾å½¢ç½®äºç›’å­çš„ä¸‹æ–¹
+	\item [x] å°†å›¾å½¢ç½®äºä¸€ä¸ªå…·æœ‰ç«‹ä½“æ•ˆæœçš„ç›’å­ä¸­	
 \end{itemize}
-ÀıÈçÍ¼\ref{arrow_show} ``Asymptote Ö¸Ê¾¼ıÍ·'' Ò»½ÚÖĞÊ¹ÓÃµÄ²åÍ¼´úÂë£º\\
+ä¾‹å¦‚å›¾\ref{arrow_show} ``Asymptote æŒ‡ç¤ºç®­å¤´'' ä¸€èŠ‚ä¸­ä½¿ç”¨çš„æ’å›¾ä»£ç ï¼š\\
 \verb+\parpic[r]{\includegraphics[scale=0.7]{arrow_show.pdf}}+
 
-ÓÃÏÂÃæµÄ´úÂëÎª»ìÅÅµÄÍ¼Æ¬Ôö¼Ó caption ºÍ label £º
+ç”¨ä¸‹é¢çš„ä»£ç ä¸ºæ··æ’çš„å›¾ç‰‡å¢åŠ  caption å’Œ label ï¼š
 \begin{Verbatim}
 \piccaption{yourcaption\label{yourlabel}}
 \parpic[r]{\includegraphics{show.pdf}}
 \end{Verbatim}
 
-¿ÉÔÚ \verb+\parpic+ Ö¸ÁîºóÃæµÄĞ¡À¨ºÅÄÚÉèÖÃÍ¼Æ¬ËùÕ¼¿Õ¼ä´óĞ¡%
-(±ØĞë¿í¡¢¸ßÍ¬Ê±Éè¶¨£¬²»ÄÜÈ±Ïî¡£ÕâÀï²»ÊÇÍ¼Æ¬´óĞ¡£¬
-Í¼Æ¬´óĞ¡ÓÃ\verb+\includegraphics+µÄ width ²ÎÊıÉè¶¨)¡£
-²åÈëÍ¼\ref{string_label}µÄ´úÂëÈçÏÂ£º
+å¯åœ¨ \verb+\parpic+ æŒ‡ä»¤åé¢çš„å°æ‹¬å·å†…è®¾ç½®å›¾ç‰‡æ‰€å ç©ºé—´å¤§å°%
+(å¿…é¡»å®½ã€é«˜åŒæ—¶è®¾å®šï¼Œä¸èƒ½ç¼ºé¡¹ã€‚è¿™é‡Œä¸æ˜¯å›¾ç‰‡å¤§å°ï¼Œ
+å›¾ç‰‡å¤§å°ç”¨\verb+\includegraphics+çš„ width å‚æ•°è®¾å®š)ã€‚
+æ’å…¥å›¾\ref{string_label}çš„ä»£ç å¦‚ä¸‹ï¼š
 \begin{Verbatim}
-\piccaption{Asymptote ÎÄ×ÖÍâ¿ò\label{string_label}}
+\piccaption{Asymptote æ–‡å­—å¤–æ¡†\label{string_label}}
 \parpic(5cm,3cm)[r]{\includegraphics{string_label.pdf}}
 \end{Verbatim}
 
-\section{¶Ñµş·ûºÅ}
-ÓÃ\verb+\stackrel{}{}+¿É½«Á½¸ö·ûºÅÊúÖ±¶ÑµşÆğÀ´¡£\\
-ÀıÈç£º\verb|$\stackrel{y\to+\infty}{x\to+\infty}$|
-µÄĞ§¹û£º$\stackrel{y\to +\infty}{x\to +\infty}$
+\section{å †å ç¬¦å·}
+ç”¨\verb+\stackrel{}{}+å¯å°†ä¸¤ä¸ªç¬¦å·ç«–ç›´å †å èµ·æ¥ã€‚\\
+ä¾‹å¦‚ï¼š\verb|$\stackrel{y\to+\infty}{x\to+\infty}$|
+çš„æ•ˆæœï¼š$\stackrel{y\to +\infty}{x\to +\infty}$
 
-ÈôÒªÒÔÏàÍ¬´óĞ¡¶Ñµş£¬¿ÉÓÃ\verb+\atop{}+ÃüÁî¡£\\
-ÀıÈç£º\verb|$y\to +\infty\atop{x\to +\infty}$|
-µÄĞ§¹û£º$y\to +\infty\atop{x\to +\infty}$
+è‹¥è¦ä»¥ç›¸åŒå¤§å°å †å ï¼Œå¯ç”¨\verb+\atop{}+å‘½ä»¤ã€‚\\
+ä¾‹å¦‚ï¼š\verb|$y\to +\infty\atop{x\to +\infty}$|
+çš„æ•ˆæœï¼š$y\to +\infty\atop{x\to +\infty}$
 
-\section{·Ö¸ô·û$\mid$}
+\section{åˆ†éš”ç¬¦$\mid$}
 \verb+$\{x\mid x>0\}$+$\quad\{x\mid x>0\}$
 
-\section{´æ´¢ºĞ×ÓµÄÓÃ·¨}
+\section{å­˜å‚¨ç›’å­çš„ç”¨æ³•}
 \begin{Verbatim}
-\newsavebox{\mybox}    %¶¨ÒåºĞ×ÓÃû³Æ
-\savebox{\mybox}{²âÊÔ´æ´¢ºĞ×ÓµÄÓÃ·¨}  %¶¨ÒåºĞ×ÓÄÚÈİ
+\newsavebox{\mybox}    %å®šä¹‰ç›’å­åç§°
+\savebox{\mybox}{æµ‹è¯•å­˜å‚¨ç›’å­çš„ç”¨æ³•}  %å®šä¹‰ç›’å­å†…å®¹
 
-\usebox{\mybox}  %Ê¹ÓÃºĞ×Ó£¬³öÏÖµÄ½«ÊÇºĞ×ÓÄÚÈİ
+\usebox{\mybox}  %ä½¿ç”¨ç›’å­ï¼Œå‡ºç°çš„å°†æ˜¯ç›’å­å†…å®¹
 \end{Verbatim}
-¶¨ÒåºĞ×ÓµÄÍêÕûĞÎÊ½Îª£º\verb+\savebox{\boxname}[width][pos]{...}+
+å®šä¹‰ç›’å­çš„å®Œæ•´å½¢å¼ä¸ºï¼š\verb+\savebox{\boxname}[width][pos]{...}+
 
-\section{ÎÄ×Ö¡¢±³¾°ÑÕÉ«}
-²ÊÉ«ÎÄ×ÖºÍ±³¾°Ğèµ¼Èë \Memph{color} ºê°ü£º\verb+\usepackage{color}+ £¬
-ÖĞÎÄ»·¾³Ğè½«ÕâÌõÖ¸ÁîÖÃÓÚ \verb+\begin{CJK}+ ÏÂÃæ¡£\\
-Àı£º\verb+\textcolor{red}{ºìÉ«µÄÎÄ×Ö}+£º\textcolor{red}{ºìÉ«µÄÎÄ×Ö}
+\section{æ–‡å­—ã€èƒŒæ™¯é¢œè‰²}
+å½©è‰²æ–‡å­—å’ŒèƒŒæ™¯éœ€å¯¼å…¥ \Memph{color} å®åŒ…ï¼š\verb+\usepackage{color}+ ï¼Œ
+ä¸­æ–‡ç¯å¢ƒéœ€å°†è¿™æ¡æŒ‡ä»¤ç½®äº \verb+\begin{CJK}+ ä¸‹é¢ã€‚\\
+ä¾‹ï¼š\verb+\textcolor{red}{çº¢è‰²çš„æ–‡å­—}+ï¼š\textcolor{red}{çº¢è‰²çš„æ–‡å­—}
 
-\section{Asymptote Ö¸Ê¾¼ıÍ·}
-\piccaption{Asymptote Ö¸Ê¾¼ıÍ·ÑİÊ¾Í¼\label{arrow_show}}
+\section{\XeLaTeX}
+ä¸‰å¤©å‰(2017-06-09)å¼€å§‹ç”¨ \XeLaTeX ï¼ŒæŠŠä¸€å †é—®é¢˜æŠ˜è…¾å¥½äº†ï¼Œ
+å½“æˆ‘å†™è¿™æ®µç¬”è®°çš„æ—¶å€™ï¼Œå“‡å“¦\ldots ç«Ÿç„¶å‘ç°æ‰“ä¸å‡º \XeLaTeX ç¬¦å·ï¼Œ
+ç¼–è¯‘å™¨æç¤º\verb+\XeLaTeX+è¿™ä¸ªå® undefined.
+
+æœäº†ä¸€åœˆæ²¡æœåˆ°ï¼Œæš‚æ—¶ç”¨ \verb+Xe\LaTeX+ æ›¿ä»£ã€‚
+å…ˆè‡ªå·±å®šä¹‰ä¸€ä¸‹å§ \verb+\newcommand{\XeLaTeX}{Xe\LaTeX}+ï¼Œ
+ç­‰æ‰¾åˆ°äº†ç›´æ¥åˆ é™¤ newcommand å®šä¹‰ã€‚
+
+æºæ–‡ä»¶å…¨éƒ¨ä½¿ç”¨ utf-8 ç¼–ç ã€‚ä¸­æ–‡ä½¿ç”¨ xeCJK å®åŒ…ã€‚
+
+\XeLaTeX æœ€å¤§çš„å¥½å¤„æ˜¯å¯ä»¥æ–¹ä¾¿åœ°ç”¨\verb+\CJKfontspec{}+æ¥å˜æ›´ä¸­æ–‡å­—ä½“äº†ã€‚
+
+{\CJKfontspec{LiSu}(éš¶ä¹¦)çœ‹è¿™é‡Œ!}
+{\CJKfontspec{YouYuan}(å¹¼åœ†)çœ‹è¿™é‡Œ!}
+{\CJKfontspec{STXingkai}(åæ–‡è¡Œæ¥·)çœ‹è¿™é‡Œ!}
+
+è¿˜æ˜¯å°½é‡é€‰æ‹©é€šç”¨çš„å­—ä½“ï¼Œå…¼å®¹ä¸åŒçš„ç¼–è¯‘ç¯å¢ƒã€‚è¿˜è¦æ³¨æ„å­—ä½“çš„æˆæƒé—®é¢˜ã€‚
+
+ä¸­æ–‡ç­‰å®½å­—ä½“è¿˜æ˜¯éœ€è¦è®¾ç½®çš„ï¼Œå¤æ‚çš„æ–‡æ¡£ä¸€èˆ¬ä¼šç”¨åˆ°ï¼Œä¸è®¾ç½®ç¼–è¯‘å™¨ä¼šæŠ¥é”™ã€‚
+\verb+\setCJKmonofont+
+
+ç°åœ¨è§‰å¾—å®åŒ…çš„è¯¦ç»†ç”¨æ³•æ²¡å¿…è¦å†™ç¬”è®°ï¼Œè¿˜æ˜¯çœ‹å®åŒ…æ–‡æ¡£æ–¹ä¾¿ã€‚
+è¿™é‡Œå°±ç•™ç€è®°å½•ä¸€ä¸‹ \XeLaTeX è¿™ä¸ªå‘ã€‚
+
+(2017-06-12 15:15:26)
+OKï¼Œç°åœ¨å¯ä»¥æŠŠä¸ŠåˆæŒ–çš„å‘å¡«ä¸Šäº†ã€‚åœ¨çŸ¥ä¹ä¸Šæäº†é—®é¢˜ï¼Œå¾—åˆ°äº†è§£ç­”ã€‚
+
+é»˜è®¤ç¡®å®æ²¡æœ‰å®šä¹‰ \verb+\XeLaTeX+ ï¼Œ hologo å®åŒ…é‡Œé¢æä¾›äº†è¿™äº›logoã€‚
+ç°åœ¨æœ¬æ–‡å¼•å…¥äº† hologo å®åŒ…ï¼Œ\XeLaTeX çš„å®šä¹‰æ”¹æˆäº†:
+\verb+\newcommand{\XeLaTeX}{\hologo{XeLaTeX}}+
+
+\section{æ‹¼éŸ³å®åŒ… xpinyin}
+åŸæ¥ç”¨ pinyin+ruby å®åŒ…å†™æ‹¼éŸ³ï¼Œå› ä¸ºå®åŒ…å…¼å®¹é—®é¢˜ï¼Œè¿˜æ²¡æ³•åˆå¹¶åˆ°è¿™ä¸ªæ–‡æ¡£ã€‚
+å‘ç°äº† xpinyin æ›´å¥½ç”¨ï¼Œä¸ä½†èƒ½è‡ªåŠ¨æ³¨éŸ³ï¼Œå…¶å®ƒåŠŸèƒ½ä¹Ÿä¸°å¯Œå¾—å¤šã€‚
+
+ç®€å•è®°ä¸€ä¸‹å¸¸ç”¨å‘½ä»¤:
+\begin{itemize}
+	\item \verb+\pinyin{pin1yin1}+ è¾“å‡ºæ‹¼éŸ³
+	\item \verb+\xpinyin{éŸ³}{yin1}+ ç»™å•ä¸ªæ±‰å­—æ‰‹å·¥æ³¨éŸ³
+	\item \verb+\xpinyin*{æ‹¼éŸ³}+ ç»™æ±‰å­—è‡ªåŠ¨æ³¨éŸ³
+	\item \verb+pinyinscope+ è‡ªåŠ¨æ³¨éŸ³ç¯å¢ƒã€‚
+\end{itemize}
+
+\verb+xpinyinsetup{key=value}+ è®¾ç½®é€‰é¡¹ã€‚\verb+multiple={\color{red}}+
+å¯ä»¥è‡ªåŠ¨å°†å¤šéŸ³å­—çš„æ³¨éŸ³æ˜¾ç¤ºä¸ºçº¢è‰²ï¼Œéœ€è¦å¼•å…¥ color å®åŒ…ã€‚
+
+\vspace{3mm}
+ç¤ºä¾‹: {\LARGE\xpinyin*[multiple={\color{red}}]{è½¦å¦‚æµæ°´é©¬å¦‚é¾™ï¼ŒèŠ±æœˆæ­£æ˜¥é£}}
+
+
+\section{Asymptote æŒ‡ç¤ºç®­å¤´}
+\piccaption{Asymptote æŒ‡ç¤ºç®­å¤´æ¼”ç¤ºå›¾\label{arrow_show}}
 \parpic[r]{\includegraphics[scale=0.7]{./figs/arrow_show.pdf}}
 \begin{Verbatim}
 size(10cm,0);
@@ -331,40 +385,40 @@ pair apt = arcpoint(p,al/2);
 draw(p);
 draw(subpath(p,0,arctime(p,al/2)),blue);
 
-// Ö¸Ïò pt µÄ¼ıÍ·£¬ÎÄ×ÖÎ»ÓÚ pt µÄ SSE£¬¼ıÍ·³¤¶È 1cm
+// æŒ‡å‘ pt çš„ç®­å¤´ï¼Œæ–‡å­—ä½äº pt çš„ SSEï¼Œç®­å¤´é•¿åº¦ 1cm
 dot(pt,red); dot(apt,blue); 
 
-// Ö¸Ïò pt µÄ¼ıÍ·£¬ÎÄ×ÖÎ»ÓÚ apt µÄ SSW£¬¼ıÍ·³¤¶È 1cm
+// æŒ‡å‘ pt çš„ç®­å¤´ï¼Œæ–‡å­—ä½äº apt çš„ SSWï¼Œç®­å¤´é•¿åº¦ 1cm
 arrow("$\frac{\text{lenght(p)}}{2}$",pt,SSE,1cm);
 arrow("$\frac{\text{arclenght(p)}}{2}$",apt,SSW,1cm);
 label("\small The sizes of the blue path and the black path are equal",
       (1,.25));
 \end{Verbatim}
 
-\section{ÓÃ \LaTeX -Suite µ¼ÈëÄ£°å}
-°²×° LaTeX{}-Suite ºó¿ÉÒÔÓÃ \Memph{:TTemplate} ÃüÁîÁĞ³öÒÑÓĞµÄÄ£°åÁĞ±í¡£%
-Ò²¿ÉÒÔÓÃ \mbox{\Memph{:TTemplate tname}} µ¼ÈëÃûÎª \Memph{tname} µÄÄ£°å¡£
-\Memph{:TTemplate} ¿É°´ÕÕ \TeX{} ¹æÔò¼òĞ´Îª \Memph{:TTe} ¡£
+\section{ç”¨ \LaTeX -Suite å¯¼å…¥æ¨¡æ¿}
+å®‰è£… LaTeX{}-Suite åå¯ä»¥ç”¨ \Memph{:TTemplate} å‘½ä»¤åˆ—å‡ºå·²æœ‰çš„æ¨¡æ¿åˆ—è¡¨ã€‚%
+ä¹Ÿå¯ä»¥ç”¨ \mbox{\Memph{:TTemplate tname}} å¯¼å…¥åä¸º \Memph{tname} çš„æ¨¡æ¿ã€‚
+\Memph{:TTemplate} å¯æŒ‰ç…§ \TeX{} è§„åˆ™ç®€å†™ä¸º \Memph{:TTe} ã€‚
 
-(2008-7-22 12:15:21)Ä£°åµ¼ÈëÊ±»á×Ô¶¯Ëõ½ø£¬¿ÉÄÜµ¼ÖÂ¸ñÊ½´íÂÒ¡£
-ÏÖÔÚÎÒÔÚ \_vimrc ÖĞ¼ÓÈëÁ½¸ö×Ô¶¯ÃüÁîÀ´½â¾ö£º
+(2008-7-22 12:15:21)æ¨¡æ¿å¯¼å…¥æ—¶ä¼šè‡ªåŠ¨ç¼©è¿›ï¼Œå¯èƒ½å¯¼è‡´æ ¼å¼é”™ä¹±ã€‚
+ç°åœ¨æˆ‘åœ¨ \_vimrc ä¸­åŠ å…¥ä¸¤ä¸ªè‡ªåŠ¨å‘½ä»¤æ¥è§£å†³ï¼š
 \begin{Verbatim}
 autocmd BufReadPre
 filetype indent off
 autocmd BufReadPost
 filetype indent on
 \end{Verbatim}
-Õâ¸ö·½·¨ÔÚÒıÈë½Ï¸´ÔÓµÄ£¬ÀıÈçÓĞ \Memph{tabular} »·¾³µÄÄ£°åÊ±ÈÔ»á³öÏÖ×Ô¶¯Ëõ½øµÄÎÊÌâ¡£
+è¿™ä¸ªæ–¹æ³•åœ¨å¼•å…¥è¾ƒå¤æ‚çš„ï¼Œä¾‹å¦‚æœ‰ \Memph{tabular} ç¯å¢ƒçš„æ¨¡æ¿æ—¶ä»ä¼šå‡ºç°è‡ªåŠ¨ç¼©è¿›çš„é—®é¢˜ã€‚
 
-\section{Asymptote ´ø±ß¿òµÄÎÄ×Ö}
-\piccaption{Asymptote ÎÄ×ÖÍâ¿ò\label{string_label}}
+\section{Asymptote å¸¦è¾¹æ¡†çš„æ–‡å­—}
+\piccaption{Asymptote æ–‡å­—å¤–æ¡†\label{string_label}}
 \parpic(5cm,3cm)[r]{\includegraphics{./figs/string_label.pdf}}
-\verb+point(object, -1)+Îª¶ÔÏó×óÁ¬½Óµã£¬
-\verb+point(object, 1)+Îª¶ÔÏóÓÒÁ¬½Óµã¡£
+\verb+point(object, -1)+ä¸ºå¯¹è±¡å·¦è¿æ¥ç‚¹ï¼Œ
+\verb+point(object, 1)+ä¸ºå¯¹è±¡å³è¿æ¥ç‚¹ã€‚
 \begin{Verbatim}
 currentpen = linewidth(2bp);
 
-// draw(string, path, pair, ÎÄ×ÖÓë±ß½çµÄmargin);
+// draw(string, path, pair, æ–‡å­—ä¸è¾¹ç•Œçš„margin);
 object hello = draw("Hello", box, (0,15mm),1mm);
 object world = draw("World", ellipse, (0,0), 2mm);
 
@@ -372,29 +426,29 @@ draw(point(hello, -1){SW} .. {W}point(world, 1), Arrow(TeXHead));
 \end{Verbatim}
 
 \section{Asymptote labelpath}
-Õâ¸öÄ£¿éÊ¹ÓÃ PSTricks pstextpath ºêÊ¹ labels °´ÕÕÒ»¸ö path ÅÅÁĞ%
-(ÏñÊ¾ÀıÎÄ¼ş curvedlabel.asy ÖĞÒ»ÑùÊÊµ±½ôÃÜÅÅÁĞ)¡£
+è¿™ä¸ªæ¨¡å—ä½¿ç”¨ PSTricks pstextpath å®ä½¿ labels æŒ‰ç…§ä¸€ä¸ª path æ’åˆ—%
+(åƒç¤ºä¾‹æ–‡ä»¶ curvedlabel.asy ä¸­ä¸€æ ·é€‚å½“ç´§å¯†æ’åˆ—)ã€‚
 
 \begin{Verbatim}
-º¯ÊıÔ­ĞÍ£º
+å‡½æ•°åŸå‹ï¼š
 void labelpath(picture pic=currentpicture, Label L, path g,
                string justify=Centered, pen p=currentpen);
 \end{Verbatim}
 
-ÕâÀï justify ÊÇ LeftJustified¡¢Centered »ò RightJustified ÆäÖĞµÄÒ»¸ö¡£
+è¿™é‡Œ justify æ˜¯ LeftJustifiedã€Centered æˆ– RightJustified å…¶ä¸­çš„ä¸€ä¸ªã€‚
 The x component of a shift transform applied to the Label is
 interpreted as a shift along the curve, whereas Chapter 7: Base
 modules 91 the y component is interpreted as a shift away from the curve.
 All other Label transforms are ignored. This package requires
 the latex tex engine and inherits the limitations of the
 PSTricks \verb+\pstextpath+ macro.
-\piccaption{labelpath Ê¾Àı\label{label_path}}
+\piccaption{labelpath ç¤ºä¾‹\label{label_path}}
 \parpic[r]{\includegraphics{./figs/label_path.pdf}}
 
-Note: Ô´ÂëÎÄ¼şÃüÃûµÄÊ±ºò²»ÄÜÓë´úÂëÖĞµ¼ÈëµÄ module Í¬Ãû£¬
-·ñÔò¿ÉÄÜ±»±àÒëÆ÷ÈÏÎªÊÇµİ¹éµ÷ÓÃ module ¡£
+Note: æºç æ–‡ä»¶å‘½åçš„æ—¶å€™ä¸èƒ½ä¸ä»£ç ä¸­å¯¼å…¥çš„ module åŒåï¼Œ
+å¦åˆ™å¯èƒ½è¢«ç¼–è¯‘å™¨è®¤ä¸ºæ˜¯é€’å½’è°ƒç”¨ module ã€‚
 
-Í¼\ref{label_path}´úÂëÈçÏÂ£º
+å›¾\ref{label_path}ä»£ç å¦‚ä¸‹ï¼š
 \begin{Verbatim}
 size(4cm, 0);
 import labelpath;
@@ -404,20 +458,20 @@ labelpath("This is a test of curved labels
           reverse(rotate(-90)*unitcircle));
 \end{Verbatim}
 
-Note: labelpath ÖĞµÄÎÄ×ÖĞèÒªÓÃ tex ÃüÁîÀ´±àÒë£¬²»ÄÜÓÃ pdflatex£¬
-ÔÚÊ¹ÓÃ CTeX Èí¼ş°üÊ±¾Í»áÒòÖĞÎÄ×ÖÌåÎÊÌâµ¼ÖÂ×Ö·ûÏÔÊ¾²»³öÀ´¡£
+Note: labelpath ä¸­çš„æ–‡å­—éœ€è¦ç”¨ tex å‘½ä»¤æ¥ç¼–è¯‘ï¼Œä¸èƒ½ç”¨ pdflatexï¼Œ
+åœ¨ä½¿ç”¨ CTeX è½¯ä»¶åŒ…æ—¶å°±ä¼šå› ä¸­æ–‡å­—ä½“é—®é¢˜å¯¼è‡´å­—ç¬¦æ˜¾ç¤ºä¸å‡ºæ¥ã€‚
 
 \section{\LaTeX -Suite hotkey}
 \begin{itemize}
-\item \verb+<F5>+¼ü¿É×Ô¶¯À©Õ¹µ±Ç° word Îª»·¾³Ä£Ê½(ÔÚÕıÎÄ²¿·Ö)£¬
-ÔÚµ¼ÑÔ²¿·Ö¿ÉÀ©Õ¹µ±Ç° word Îª\verb+\usepackage{word}+
-\item \verb+<F7>+¼ü¿É×Ô¶¯À©Õ¹µ±Ç° word ÎªÃüÁîÄ£Ê½
-\item ºÍ»·¾³À©Õ¹ÒÔ`E' ¿ªÍ¨ÀàËÆ£¬×ÖÌå»·¾³ÒÔ`F'¿ªÍ·¡£
-	`FEM'¼´À©Õ¹Îª: \verb|\emph{}<++>|
-\item ALT-l ¼üÀ©Õ¹Îª£º\verb|\label{}<++>|
+\item \verb+<F5>+é”®å¯è‡ªåŠ¨æ‰©å±•å½“å‰ word ä¸ºç¯å¢ƒæ¨¡å¼(åœ¨æ­£æ–‡éƒ¨åˆ†)ï¼Œ
+åœ¨å¯¼è¨€éƒ¨åˆ†å¯æ‰©å±•å½“å‰ word ä¸º\verb+\usepackage{word}+
+\item \verb+<F7>+é”®å¯è‡ªåŠ¨æ‰©å±•å½“å‰ word ä¸ºå‘½ä»¤æ¨¡å¼
+\item å’Œç¯å¢ƒæ‰©å±•ä»¥`E' å¼€é€šç±»ä¼¼ï¼Œå­—ä½“ç¯å¢ƒä»¥`F'å¼€å¤´ã€‚
+	`FEM'å³æ‰©å±•ä¸º: \verb|\emph{}<++>|
+\item ALT-l é”®æ‰©å±•ä¸ºï¼š\verb|\label{}<++>|
 \end{itemize}
 
-\subsection{ÖÇÄÜÀ©Õ¹×Ö·û£º}
+\subsection{æ™ºèƒ½æ‰©å±•å­—ç¬¦ï¼š}
 \begin{Verbatim}
 '__' -> '_{<++>}<++>'                 '()' -> '(<++>)<++>'
 '[]' -> '[<++>]<++>'                  '{}' -> '{<++>}<++>'
@@ -429,7 +483,7 @@ Note: labelpath ÖĞµÄÎÄ×ÖĞèÒªÓÃ tex ÃüÁîÀ´±àÒë£¬²»ÄÜÓÃ pdflatex£¬
 '{{' -> '\left\{ <++> \right\}<++>'
 \end{Verbatim}
 
-\subsection{ÖØ¸´¼üÈë×Ô¶¯À©Õ¹×Ö·û}
+\subsection{é‡å¤é”®å…¥è‡ªåŠ¨æ‰©å±•å­—ç¬¦}
 \begin{Verbatim}
 = -> \equiv                            \\ -> \setminus
 '.' -> \cdot                           '*' -> \times
@@ -442,7 +496,7 @@ Note: labelpath ÖĞµÄÎÄ×ÖĞèÒªÓÃ tex ÃüÁîÀ´±àÒë£¬²»ÄÜÓÃ pdflatex£¬
 ':' -> \ddot{<++>}<++>
 \end{Verbatim}
 
-\subsection{$\backprime$Ç°×ºÀ©Õ¹×Ö·û£º}
+\subsection{$\backprime$å‰ç¼€æ‰©å±•å­—ç¬¦ï¼š}
 \begin{Verbatim}
 ^ -> \hat{<++>}<++>                    _ -> \bar{<++>}<++>
 6 -> \partial                          8 -> \infty
@@ -452,7 +506,7 @@ Note: labelpath ÖĞµÄÎÄ×ÖĞèÒªÓÃ tex ÃüÁîÀ´±àÒë£¬²»ÄÜÓÃ pdflatex£¬
 I -> \\int_{<++>}^{<++>}<++>
 \end{Verbatim}
 
-\subsection{Ï£À°×ÖÄ¸:}
+\subsection{å¸Œè…Šå­—æ¯:}
 \begin{Verbatim}
 a -> \alpha              b -> \beta              c -> \chi
 d -> \delta              e -> \varepsilon        f -> \varphi
@@ -469,8 +523,8 @@ $\alpha{}\ \beta{}\ \chi{}\ \delta{}\ \varepsilon{}\ %
 \pi{}\ \theta{}\ \rho{}\ \sigma{}\ \tau{}\ \upsilon{}\ %
 \varsigma{}\ \wedge{}\ \xi{}\ \psi{}\ \zeta$}}}
 
-²»ÊÇËùÓĞµÄÏ£À°×ÖÄ¸ÔÚ \LaTeX -Suite ÖĞ¶¼ÓĞ´óĞ´ĞÎÊ½£¬\\
-¿É²Î¿¼ \verb+http://www.giss.nasa.gov/latex/ltx-405.html+
+ä¸æ˜¯æ‰€æœ‰çš„å¸Œè…Šå­—æ¯åœ¨ \LaTeX -Suite ä¸­éƒ½æœ‰å¤§å†™å½¢å¼ï¼Œ\\
+å¯å‚è€ƒ \verb+http://www.giss.nasa.gov/latex/ltx-405.html+
 \begin{Verbatim}
 D -> \Delta              G -> \Gamma             F -> \Phi
 L -> \Lambda             X -> \Xi                Q -> \Theta
@@ -481,8 +535,8 @@ W -> \Omega
 $\Delta{}\ \Gamma{}\ \Phi{}\ \Lambda{}\ \Xi{}\ \Theta{}\ \Psi{}\ %
 \Sigma{}\ \Upsilon{}\ \Omega$}}}
 
-\section{Asymptote: Öá¶Ô³Æ±ä»»}
-\piccaption{Öá¶Ô³Æ±ä»»\label{asy_reflect}}
+\section{Asymptote: è½´å¯¹ç§°å˜æ¢}
+\piccaption{è½´å¯¹ç§°å˜æ¢\label{asy_reflect}}
 \parpic[r]{\includegraphics{./figs/reflect.pdf}}
 \begin{Verbatim}
 size(4cm);
@@ -498,13 +552,13 @@ draw(reflect((0,0),(1,1)) * ff, drawpen+blue+dashed);
 draw((0,0)--(2,2), drawpen);
 \end{Verbatim}
 
-\section{Asymptote: ±ê¼Ç½Ç¶È}
-Ê¹ÓÃ \Memph{markers} °üÖĞµÄ \Memph{markangle()} º¯ÊıÎª½Ç¶È×ö±ê¼Ç¡£
-\verb+\angle+$\to \angle$ ¡£
+\section{Asymptote: æ ‡è®°è§’åº¦}
+ä½¿ç”¨ \Memph{markers} åŒ…ä¸­çš„ \Memph{markangle()} å‡½æ•°ä¸ºè§’åº¦åšæ ‡è®°ã€‚
+\verb+\angle+$\to \angle$ ã€‚
 
 \vspace{4mm}
-º¯ÊıÔ­ĞÍ£º
-\piccaption{±ê¼Ç½Ç¶È\label{asy_angle}}
+å‡½æ•°åŸå‹ï¼š
+\piccaption{æ ‡è®°è§’åº¦\label{asy_angle}}
 \parpic[r]{\includegraphics{./figs/angle.pdf}}
 \begin{Verbatim}
 void markangle(picture pic=currentpicture, Label L="",
@@ -514,7 +568,7 @@ void markangle(picture pic=currentpicture, Label L="",
                marker marker=nomarker);
 \end{Verbatim}
 
-Ê¾Àı(Í¼\ref{asy_angle})£º
+ç¤ºä¾‹(å›¾\ref{asy_angle})ï¼š
 \begin{Verbatim}
 import markers;
 pair A=(50,60), B=(60,10), origin=(0,0);
@@ -522,10 +576,10 @@ draw(A--origin--B, linewidth(2bp));
 markangle("\angle BOA", B, origin, A, Arrow, linewidth(bp));
 \end{Verbatim}
 
-\section{Asymptote ÖĞµÄÖĞÎÄ}
-Asymptote Ê¹ÓÃ \TeX{} ´¦ÀíÖĞÎÄ£¬
-°´Í¼\ref{asy_chinese}ÖĞÕâÑùÔÚÉú³ÉµÄÍ¼ÏñÖĞÊ¹ÓÃÖĞÎÄ£º
-\piccaption{ÔÚ Asymptote ÖĞÊ¹ÓÃÖĞÎÄ\label{asy_chinese}}
+\section{Asymptote ä¸­çš„ä¸­æ–‡}
+Asymptote ä½¿ç”¨ \TeX{} å¤„ç†ä¸­æ–‡ï¼Œ
+æŒ‰å›¾\ref{asy_chinese}ä¸­è¿™æ ·åœ¨ç”Ÿæˆçš„å›¾åƒä¸­ä½¿ç”¨ä¸­æ–‡ï¼š
+\piccaption{åœ¨ Asymptote ä¸­ä½¿ç”¨ä¸­æ–‡\label{asy_chinese}}
 \parpic(5.5cm,3cm)[r]{\includegraphics{./figs/chinese.pdf}}
 \begin{Verbatim}
 import labelpath;
@@ -533,21 +587,21 @@ size(100);
 texpreamble("\usepackage{CJK}\AtBeginDocument{
             \begin{CJK}{GBK}{fs}}
             \AtEndDocument{\clearpage\end{CJK}}");
-labelpath("\scriptsize ÏÖÔÚ¿ÉÒÔÏñÔÚ \LaTeX{}
-          ÖĞÒ»ÑùÔÚ Asymptote ÖĞÊ¹ÓÃÖĞÎÄ",
+labelpath("\scriptsize ç°åœ¨å¯ä»¥åƒåœ¨ \LaTeX{}
+          ä¸­ä¸€æ ·åœ¨ Asymptote ä¸­ä½¿ç”¨ä¸­æ–‡",
           reverse(rotate(-90)*unitcircle));
 \end{Verbatim}
 
-ÔÚÔ´ÎÄ¼şÍ·¼ÓÈëÉè¶¨: \verb+settings.tex=pdflatex+ ¿ÉÒÔÖ¸¶¨ÓÃ pdflatex
-ÃüÁî±àÒë label£¬²¢Ö±½ÓÉú³É PDF µÄÍ¼ĞÎ£¬±ÜÃâÄ¬ÈÏµÄ±àÒëÆ÷Ôì³ÉÈ±ÉÙºº×Ö%
-×ÖÌåµÄÎÊÌâ¡£
+åœ¨æºæ–‡ä»¶å¤´åŠ å…¥è®¾å®š: \verb+settings.tex=pdflatex+ å¯ä»¥æŒ‡å®šç”¨ pdflatex
+å‘½ä»¤ç¼–è¯‘ labelï¼Œå¹¶ç›´æ¥ç”Ÿæˆ PDF çš„å›¾å½¢ï¼Œé¿å…é»˜è®¤çš„ç¼–è¯‘å™¨é€ æˆç¼ºå°‘æ±‰å­—%
+å­—ä½“çš„é—®é¢˜ã€‚
 
-Note: labelpath ÖĞµÄÎÄ×ÖĞèÒªÓÃ tex ÃüÁîÀ´±àÒë£¬²»ÄÜÓÃ pdflatex£¬
-ÔÚÊ¹ÓÃ CTeX Èí¼ş°üÊ±¾Í»áÒòÖĞÎÄ×ÖÌåÎÊÌâµ¼ÖÂ×Ö·ûÏÔÊ¾²»³öÀ´¡£
-ËùÒÔ½öÔÚ²»Ê¹ÓÃ labelpath£¬Ö»Ê¹ÓÃ label µÄÊ±ºòÓÃ pdflatex ±àÒë¡£
+Note: labelpath ä¸­çš„æ–‡å­—éœ€è¦ç”¨ tex å‘½ä»¤æ¥ç¼–è¯‘ï¼Œä¸èƒ½ç”¨ pdflatexï¼Œ
+åœ¨ä½¿ç”¨ CTeX è½¯ä»¶åŒ…æ—¶å°±ä¼šå› ä¸­æ–‡å­—ä½“é—®é¢˜å¯¼è‡´å­—ç¬¦æ˜¾ç¤ºä¸å‡ºæ¥ã€‚
+æ‰€ä»¥ä»…åœ¨ä¸ä½¿ç”¨ labelpathï¼Œåªä½¿ç”¨ label çš„æ—¶å€™ç”¨ pdflatex ç¼–è¯‘ã€‚
 
-\section{Asymptote µÄÏßÌõÁ¬½Ó·ç¸ñ}
-\piccaption{linecap(0¡¢1¡¢2) ÈıÖÖÁ¬½Ó·ç¸ñ\label{connection_style}}
+\section{Asymptote çš„çº¿æ¡è¿æ¥é£æ ¼}
+\piccaption{linecap(0ã€1ã€2) ä¸‰ç§è¿æ¥é£æ ¼\label{connection_style}}
 \parpic(7cm,2cm)[r]{\includegraphics{./figs/connection_style.pdf}}
 \begin{Verbatim}
 pen squarecap = linecap(0);
@@ -555,14 +609,14 @@ pen roundcap = linecap(1);
 pen extendcap = linecap(2);
 \end{Verbatim}
 
-\section{Asymptote: µ¼ÈëÍ¼ÏñÎÄ¼ş}
+\section{Asymptote: å¯¼å…¥å›¾åƒæ–‡ä»¶}
 \verb+string graphic(string name, string options="")+\\
-·µ»ØÒ»¸ö¿ÉÒÔÓÃÀ´µ¼Èë EPS ÎÄ¼şµÄ string ±äÁ¿(Ö»ÄÜµ¼Èë EPS ¸ñÊ½ÎÄ¼ş)¡£
+è¿”å›ä¸€ä¸ªå¯ä»¥ç”¨æ¥å¯¼å…¥ EPS æ–‡ä»¶çš„ string å˜é‡(åªèƒ½å¯¼å…¥ EPS æ ¼å¼æ–‡ä»¶)ã€‚
 
-ÕâÀï \Memph{name} ÊÇ±»µ¼ÈëµÄ EPS ÎÄ¼şÃû¡£
-\Memph{option} ÊÇÒ»¸ö°üº¬ÏÂÃæÑ¡ÏîµÄÓÃ¶ººÅ·Ö¸îµÄ²ÎÊıÁĞ±í¡£
+è¿™é‡Œ \Memph{name} æ˜¯è¢«å¯¼å…¥çš„ EPS æ–‡ä»¶åã€‚
+\Memph{option} æ˜¯ä¸€ä¸ªåŒ…å«ä¸‹é¢é€‰é¡¹çš„ç”¨é€—å·åˆ†å‰²çš„å‚æ•°åˆ—è¡¨ã€‚
 \begin{itemize}
-\piccaption{Asymptote µ¼ÈëÍ¼ÏñÎÄ¼ş\label{input_fig}}
+\piccaption{Asymptote å¯¼å…¥å›¾åƒæ–‡ä»¶\label{input_fig}}
 \parpic(6cm,4.5cm)[r]{\includegraphics{./figs/input_fig.pdf}}
 	\item (bb=llx lly urx ury) bounding box
 	\item (width=value) width
@@ -573,9 +627,9 @@ pen extendcap = linecap(2);
 	\item (draft=bool) draft mode
 \end{itemize}
 
-\Memph{void layer()} º¯Êı¿ÉÒÔ½«ºóÃæÌí¼ÓµÄ¶ÔÏó·ÅÔÚµ¼ÈëµÄÍ¼ÏñÉÏ²ã¡£
+\Memph{void layer()} å‡½æ•°å¯ä»¥å°†åé¢æ·»åŠ çš„å¯¹è±¡æ”¾åœ¨å¯¼å…¥çš„å›¾åƒä¸Šå±‚ã€‚
 
-Í¼\ref{input_fig}µÄ´úÂë£º
+å›¾\ref{input_fig}çš„ä»£ç ï¼š
 \begin{Verbatim}
 label(graphic("hb.eps", "width=5cm, clip=true"),
       position=(0,0));
@@ -590,8 +644,8 @@ draw(circle((0,-13), 42), linewidth(bp)+red);
 %See Pythagoras.asy for an example.
 %
 
-\section{\LaTeX{} ÖĞ¾Ö²¿ĞĞ¾àÉèÖÃ}
-¿ÉÓÃ \Memph{setspace} ºê°üÉèÖÃ¾Ö²¿ĞĞ¾à¡£ÈçÏÂËùÊ¾£º
+\section{\LaTeX{} ä¸­å±€éƒ¨è¡Œè·è®¾ç½®}
+å¯ç”¨ \Memph{setspace} å®åŒ…è®¾ç½®å±€éƒ¨è¡Œè·ã€‚å¦‚ä¸‹æ‰€ç¤ºï¼š
 \begin{Verbatim}
 \usepackage{setspace}
 \begin{spacing}{1.8}
@@ -599,22 +653,22 @@ draw(circle((0,-13), 42), linewidth(bp)+red);
 \end{spacing}
 \end{Verbatim}
 
-\section{Asymptote: cut() ºÍ struct slice}
+\section{Asymptote: cut() å’Œ struct slice}
 \verb+slice cut(path p, path knife, int n);+\\
-ÒÔ \verb+struct slice { path before,after; }+ ĞÎÊ½·µ»ØÂ·¾¶ p
-±»ÓëÂ·¾¶ knife µÚ n(\Memph{´Ó$0$¿ªÊ¼¼ÆÊı}) ¸ö½»µã·Ö¸ô¿ªµÄÇ°¡¢
-ºóÁ½²¿·Ö(Èç¹ûÁ½ÌõÂ·¾¶Ã»ÓĞ½»µã£¬Õû¸öÂ·¾¶ p ¶¼±»ÈÏÎªÊÇ½»µã`Ç°'µÄ²¿·Ö)¡£
+ä»¥ \verb+struct slice { path before,after; }+ å½¢å¼è¿”å›è·¯å¾„ p
+è¢«ä¸è·¯å¾„ knife ç¬¬ n(\Memph{ä»$0$å¼€å§‹è®¡æ•°}) ä¸ªäº¤ç‚¹åˆ†éš”å¼€çš„å‰ã€
+åä¸¤éƒ¨åˆ†(å¦‚æœä¸¤æ¡è·¯å¾„æ²¡æœ‰äº¤ç‚¹ï¼Œæ•´ä¸ªè·¯å¾„ p éƒ½è¢«è®¤ä¸ºæ˜¯äº¤ç‚¹`å‰'çš„éƒ¨åˆ†)ã€‚
 
-²ÎÊı n »á¶Ô½»µãÊıÈ¡Ä£($n \% numOfIntersection$)¡£
+å‚æ•° n ä¼šå¯¹äº¤ç‚¹æ•°å–æ¨¡($n \% numOfIntersection$)ã€‚
 
 \verb+slice firstcut(path p, path knife);+
-µÈ¼ÛÓÚ \verb+cut(p, knife, 0);+ ¡£
+ç­‰ä»·äº \verb+cut(p, knife, 0);+ ã€‚
 
 \verb+slice lastcut(path p, path knife);+
-µÈ¼ÛÓÚ \verb+cut(p, knife, -1);+ ¡£
-\piccaption{cut º¯ÊıºÍ sturct slice Ê¾Àı\label{cut_slice}}
+ç­‰ä»·äº \verb+cut(p, knife, -1);+ ã€‚
+\piccaption{cut å‡½æ•°å’Œ sturct slice ç¤ºä¾‹\label{cut_slice}}
 \parpic(7cm, 3cm)[r]{\includegraphics{./figs/cut_slice.pdf}}
-Ê¾Àı´úÂë(Í¼\ref{cut_slice}):
+ç¤ºä¾‹ä»£ç (å›¾\ref{cut_slice}):
 \begin{Verbatim}
 size(150); import graph; defaultpen(2bp);
 
@@ -627,71 +681,71 @@ draw("$sin(x)$.before", k.before, N, blue);
 draw("$sin(x)$.after", k.after, S, red);
 \end{Verbatim}
 
-\section{Asymptote ÑÕÉ«Ãû³Æ}
+\section{Asymptote é¢œè‰²åç§°}
 \begin{figure}[htpb]
 \centering
 \includegraphics[scale=0.7]{./figs/asy_color.pdf}
-\caption{Asymptote ÑÕÉ«Ãû³Æ}
+\caption{Asymptote é¢œè‰²åç§°}
 \label{fig:asy_color}
 \end{figure}
 
-ÑÕÉ«ÓÉÉîµ½Ç³µÄĞŞÊÎ´Ê: dark$\to$deep$\to$heavy$\to$*$\to$medium$\to$light%
-$\to$pale ¡£
+é¢œè‰²ç”±æ·±åˆ°æµ…çš„ä¿®é¥°è¯: dark$\to$deep$\to$heavy$\to$*$\to$medium$\to$light%
+$\to$pale ã€‚
 
-ÈçÍ¼\ref{fig:asy_color2}ËùÊ¾£º
+å¦‚å›¾\ref{fig:asy_color2}æ‰€ç¤ºï¼š
 \begin{figure}[htpb]
 \centering
 \includegraphics[scale=0.7]{./figs/asy_color2.pdf}
-\caption{ÑÕÉ«ÓÉÉîµ½Ç³µÄĞŞÊÎ´Ê}
+\caption{é¢œè‰²ç”±æ·±åˆ°æµ…çš„ä¿®é¥°è¯}
 \label{fig:asy_color2}
 \end{figure}
 
-\section{Asymptote: ×ÖÌå´óĞ¡£¬Arrow¡¢UnFill ´óĞ¡ ºÍ xtick}
-ÏÂÃæ´úÂëµÚ 3ĞĞÉèÖÃ¶¨ÒåÄ¬ÈÏ×ÖÌå´óĞ¡£¬
-Ò²¿ÉÓÃ\verb+defaultpen(fontsize(12pt))+ĞÎÊ½¡£
+\section{Asymptote: å­—ä½“å¤§å°ï¼ŒArrowã€UnFill å¤§å° å’Œ xtick}
+ä¸‹é¢ä»£ç ç¬¬ 3è¡Œè®¾ç½®å®šä¹‰é»˜è®¤å­—ä½“å¤§å°ï¼Œ
+ä¹Ÿå¯ç”¨\verb+defaultpen(fontsize(12pt))+å½¢å¼ã€‚
 
-µÚ 14¡¢15ĞĞ´úÂë·½Î»±êÖ¾\Memph{S}Ç°µÄÊı×Ö±íÊ¾
-label Óë±ê¼ÇµãµÄ¾àÀë£¬
-\verb+UnFill(real)+ÖĞ²ÎÊı¶¨Òå¿Õ°×´óĞ¡(\Memph{Note:}²»ÊÇdot´óĞ¡£¬
-dot´óĞ¡ÓÉlinewidth() »ò dotfactor Éè¶¨)¡£
+ç¬¬ 14ã€15è¡Œä»£ç æ–¹ä½æ ‡å¿—\Memph{S}å‰çš„æ•°å­—è¡¨ç¤º
+label ä¸æ ‡è®°ç‚¹çš„è·ç¦»ï¼Œ
+\verb+UnFill(real)+ä¸­å‚æ•°å®šä¹‰ç©ºç™½å¤§å°(\Memph{Note:}ä¸æ˜¯dotå¤§å°ï¼Œ
+dotå¤§å°ç”±linewidth() æˆ– dotfactor è®¾å®š)ã€‚
 
-Í¼\ref{dot_label_tick}µÄ $a$±ê¼ÇµãÖÜÎ§ÓĞ¿Õ°×£¬
-Õâ¾ÍÊÇ\verb+UnFill(real)+µÄÉèÖÃ¹ı´ó¡£
+å›¾\ref{dot_label_tick}çš„ $a$æ ‡è®°ç‚¹å‘¨å›´æœ‰ç©ºç™½ï¼Œ
+è¿™å°±æ˜¯\verb+UnFill(real)+çš„è®¾ç½®è¿‡å¤§ã€‚
 
-\piccaption{×ÖÌå.Arrow.UnFill\\´óĞ¡ÉèÖÃ\label{dot_label_tick}}
+\piccaption{å­—ä½“.Arrow.UnFill\\å¤§å°è®¾ç½®\label{dot_label_tick}}
 \parpic[r]{\includegraphics[width=0.4\textwidth]{./figs/dot_label_tick.pdf}}
 \begin{Verbatim}
 import graph;
 size(200,0);
-defaultpen(1bp+red); //Éè¶¨Ä¬ÈÏpenÖ±¾¶ºÍÑÕÉ«
+defaultpen(1bp+red); //è®¾å®šé»˜è®¤penç›´å¾„å’Œé¢œè‰²
 defaultpen(fontcommand("\large"));
 
 xlimits(0,10);
-xaxis("$x$", Arrow(10pt)); //Arrow(real) ÖĞ²ÎÊı¿ÉÒÔÉè¶¨´óĞ¡
-xtick("$O$", 1); //µÚ¶ş¸ö²ÎÊıÒ²¿ÉÒÔÓÃ pair
+xaxis("$x$", Arrow(10pt)); //Arrow(real) ä¸­å‚æ•°å¯ä»¥è®¾å®šå¤§å°
+xtick("$O$", 1); //ç¬¬äºŒä¸ªå‚æ•°ä¹Ÿå¯ä»¥ç”¨ pair
 pair a=(3,0), b=(7,0), rise=(0,0.5);
 
 draw("$(a, b)$", a--(a+rise)--(b+rise)--b,
-    N, blue+fontsize(16pt));//×îºóÒ»¸ö²ÎÊı¶¨Òå´Ë´¦µÄpenºÍ×ÖÌå´óĞ¡
+    N, blue+fontsize(16pt));//æœ€åä¸€ä¸ªå‚æ•°å®šä¹‰æ­¤å¤„çš„penå’Œå­—ä½“å¤§å°
 
 dot("$a$", a, 2S, UnFill(3pt));
 dot("$b$", b, 2S, UnFill);
 \end{Verbatim}
 
-\section{Asymptote: size()º¯Êı}
+\section{Asymptote: size()å‡½æ•°}
 size(200); //x=200,y=200\\
-size(200,0); //x=200, y²»ÏŞÖÆ\\
-size(0,200); //x²»ÏŞÖÆ, y=200\\
-size(0,0); //Ö±½Ó²ÉÓÃ PostScript µÄ×ø±ê£¬×îÖÕ²»×öÈÎºÎÍ¼ĞÎ³ß´çµÄ¿ØÖÆ£¬
-ÕâÊ±×÷Í¼µÈ¼ÛÓÚ MetaPost µÄÊÖ¹¤¿ØÖÆ×îÖÕÍ¼ĞÎµÄ³ß´ç¡£
+size(200,0); //x=200, yä¸é™åˆ¶\\
+size(0,200); //xä¸é™åˆ¶, y=200\\
+size(0,0); //ç›´æ¥é‡‡ç”¨ PostScript çš„åæ ‡ï¼Œæœ€ç»ˆä¸åšä»»ä½•å›¾å½¢å°ºå¯¸çš„æ§åˆ¶ï¼Œ
+è¿™æ—¶ä½œå›¾ç­‰ä»·äº MetaPost çš„æ‰‹å·¥æ§åˆ¶æœ€ç»ˆå›¾å½¢çš„å°ºå¯¸ã€‚
 
-\section{ÌØÊâ·ûºÅ}
-ºê°üµ¼ÈëÌ«¶àÃüÁî»á³åÍ»£¬ifsym\footnote{µ¼ÈëÌìÆø·ûºÅĞèÒªÓÃ weather Ñ¡Ïî}%
-ÀïÃæÓĞºÃ¶àÆ¯ÁÁµÄ·ûºÅ¾ÍÃ»·¨ÔÚÕâÀï show ÁË£¬
-ÎÒÕÒÕÒÓĞÃ»ÓĞµ¼Èë¾Ö²¿ÃüÁîµÄ·½·¨\footnote{ËÆºõÄ¿Ç°»¹Ã»ÓĞºÃµÄ°ì·¨%
-¿ÉÒÔÍêÃÀ½â¾öÕâ¸öÎÊÌâ£¬¹ØÓÚºº×Ö×¢ÒôµÄ±Ê¼ÇÓÉÓÚºÍÏ£À°×ÖÄ¸ÃüÁî³åÍ»£¬
-Ö»ÄÜ·ÅÔÚ addtional.tex ÀïÃæÁË}¡£ÌØÊâ·ûºÅ²Î¿¼ÎÄµµ symbols ¡£
-\Memph{bbding} ºê°üÒ»¶¨ÒªÔÚ \Memph{wasysym} Ö®Ç°µ¼Èë£º\verb+\usepackage{bbding, wasysym}+
+\section{ç‰¹æ®Šç¬¦å·}
+å®åŒ…å¯¼å…¥å¤ªå¤šå‘½ä»¤ä¼šå†²çªï¼Œifsym\footnote{å¯¼å…¥å¤©æ°”ç¬¦å·éœ€è¦ç”¨ weather é€‰é¡¹}%
+é‡Œé¢æœ‰å¥½å¤šæ¼‚äº®çš„ç¬¦å·å°±æ²¡æ³•åœ¨è¿™é‡Œ show äº†ï¼Œ
+æˆ‘æ‰¾æ‰¾æœ‰æ²¡æœ‰å¯¼å…¥å±€éƒ¨å‘½ä»¤çš„æ–¹æ³•\footnote{ä¼¼ä¹ç›®å‰è¿˜æ²¡æœ‰å¥½çš„åŠæ³•%
+å¯ä»¥å®Œç¾è§£å†³è¿™ä¸ªé—®é¢˜ï¼Œå…³äºæ±‰å­—æ³¨éŸ³çš„ç¬”è®°ç”±äºå’Œå¸Œè…Šå­—æ¯å‘½ä»¤å†²çªï¼Œ
+åªèƒ½æ”¾åœ¨ addtional.tex é‡Œé¢äº†}ã€‚ç‰¹æ®Šç¬¦å·å‚è€ƒæ–‡æ¡£ symbols ã€‚
+\Memph{bbding} å®åŒ…ä¸€å®šè¦åœ¨ \Memph{wasysym} ä¹‹å‰å¯¼å…¥ï¼š\verb+\usepackage{bbding, wasysym}+
 
 \begin{tabular}[hbtp]{ccl|ccl}
 \permil & wasysym & \verb+\permil+ & \HandLeft & bbding & \verb+\HandLeft+\\
@@ -702,70 +756,70 @@ size(0,0); //Ö±½Ó²ÉÓÃ PostScript µÄ×ø±ê£¬×îÖÕ²»×öÈÎºÎÍ¼ĞÎ³ß´çµÄ¿ØÖÆ£¬
 \Plane & bbding & \verb+\Plane+ & \Tape & bbding & \verb+\Tape+
 \end{tabular}
 
-\subsection{´øÍâÈ¦µÄ·ûºÅ}
+\subsection{å¸¦å¤–åœˆçš„ç¬¦å·}
 \verb+\textcircled{A}+ \textcircled{A}
 
-ºº×Ö±ÈÓ¢ÎÄ×ÖÄ¸´óÒ»µã»áÅÜµ½È¦ÍâÃæ£º\verb+\textcircled{×Ö}+ \textcircled{×Ö}
+æ±‰å­—æ¯”è‹±æ–‡å­—æ¯å¤§ä¸€ç‚¹ä¼šè·‘åˆ°åœˆå¤–é¢ï¼š\verb+\textcircled{å­—}+ \textcircled{å­—}
 
-\subsection{»õ±Ò·ûºÅ}
+\subsection{è´§å¸ç¬¦å·}
 \verb+\$+ \$\hspace{1cm}\verb+\pounds+ \pounds
 
-textcomp ºê°ü£º
+textcomp å®åŒ…ï¼š
 \verb+\textcent+ \textcent\hfill
 \verb+\textyen+ \textyen\hfill
 \verb+\textsterling+ \textsterling
 
-eurosym ºê°ü£º
+eurosym å®åŒ…ï¼š
 \verb+\geneuro+ \geneuro\hfill
 \verb+\geneuronarrow+ \geneuronarrow\hfill
 \verb+\geneurowide+ \geneurowide\hfill
 \verb+\officialeuro+ \officialeuro
 
-\section{Beamer ÎÄµµÀà}
+\section{Beamer æ–‡æ¡£ç±»}
 \begin{itemize}
-	\item ÔÚ\verb+\section{}+²ÎÊıÖĞÓÃºº×Ö£¬
-		ĞèÔÚµ¼Èë beamer ÎÄµµÀàÊ±¼Ó CJK ²ÎÊı£º\\
+	\item åœ¨\verb+\section{}+å‚æ•°ä¸­ç”¨æ±‰å­—ï¼Œ
+		éœ€åœ¨å¯¼å…¥ beamer æ–‡æ¡£ç±»æ—¶åŠ  CJK å‚æ•°ï¼š\\
 		\verb+\documentclass[CJK]{beamer}+
-	\item \verb+\begin{CJK}{GBK}{fs}+Òª·ÅÔÚ \verb+\begin{document}+ ÏÂÃæ¡£
-	\item ĞèÊ¹ÓÃ\verb+\verb+ÃüÁî»ò verbatim »·¾³µÄ frame Òª´ø²ÎÊı
+	\item \verb+\begin{CJK}{GBK}{fs}+è¦æ”¾åœ¨ \verb+\begin{document}+ ä¸‹é¢ã€‚
+	\item éœ€ä½¿ç”¨\verb+\verb+å‘½ä»¤æˆ– verbatim ç¯å¢ƒçš„ frame è¦å¸¦å‚æ•°
 		\Memph{fragile}:\verb+\begin{frame}[fragile]+\\
-			²¢ÇÒ´ËÊ±²»¿ÉÖ±½ÓÔÚ frame »·¾³²ÎÊıÖĞĞ´ \Memph{frametitle}£¬
-			¶øÓ¦ÓÃ \verb+\frametitle{}+ ÃüÁî¡£
-	\item µ¼ÑÔÇø¼ÓÈë\verb+\setbeamertemplate{navigation symbols}{}+
-		È¡Ïûµ¼º½Ìõ¡£
-	\item \verb+\includegraphics[]{}+¶¨Òå¿í¶È»ò¸ß¶È²ÎÊıĞèÃ÷È·Ğ´:
-		``[width=]'' »ò ``[height=]'' ¡£
+			å¹¶ä¸”æ­¤æ—¶ä¸å¯ç›´æ¥åœ¨ frame ç¯å¢ƒå‚æ•°ä¸­å†™ \Memph{frametitle}ï¼Œ
+			è€Œåº”ç”¨ \verb+\frametitle{}+ å‘½ä»¤ã€‚
+	\item å¯¼è¨€åŒºåŠ å…¥\verb+\setbeamertemplate{navigation symbols}{}+
+		å–æ¶ˆå¯¼èˆªæ¡ã€‚
+	\item \verb+\includegraphics[]{}+å®šä¹‰å®½åº¦æˆ–é«˜åº¦å‚æ•°éœ€æ˜ç¡®å†™:
+		``[width=]'' æˆ– ``[height=]'' ã€‚
 \end{itemize}
 
-\section{×Ô¶¨ÒåÑÕÉ«}
-Ê¹ÓÃ \Memph{color} ºê°üµÄ \verb+\definecolor{name}{mode}{color-spec}+
-ÃüÁî¿ÉÒÔ×Ô¶¨ÒåÑÕÉ«¡£Õâ¸ö±Ê¼ÇÖĞ \Memph{Ç¿µ÷ÎÄ±¾}
-µÄÑÕÉ«¾ÍÊÇÓÃÏÂÃæµÄ´úÂë¶¨ÒåµÄ£º
+\section{è‡ªå®šä¹‰é¢œè‰²}
+ä½¿ç”¨ \Memph{color} å®åŒ…çš„ \verb+\definecolor{name}{mode}{color-spec}+
+å‘½ä»¤å¯ä»¥è‡ªå®šä¹‰é¢œè‰²ã€‚è¿™ä¸ªç¬”è®°ä¸­ \Memph{å¼ºè°ƒæ–‡æœ¬}
+çš„é¢œè‰²å°±æ˜¯ç”¨ä¸‹é¢çš„ä»£ç å®šä¹‰çš„ï¼š
 \begin{Verbatim}
 	\definecolor{Mzise}{RGB}{109,0,219}
 	\newcommand{\Memph}[1]{\textcolor{Mzise}{#1}}
 \end{Verbatim}
 
-³ıÁËÓÃ \Memph{RGB} Ä£Ê½¶¨ÒåÑÕÉ«Íâ£¬»¹¿ÉÒÔÓÃ \Memph{cmyk} »òÆäËüÄ£Ê½£¬
-Ä¿Ç° RGB ÑÕÉ«ÒÑ¾­¹»ÓÃÁË¡£
+é™¤äº†ç”¨ \Memph{RGB} æ¨¡å¼å®šä¹‰é¢œè‰²å¤–ï¼Œè¿˜å¯ä»¥ç”¨ \Memph{cmyk} æˆ–å…¶å®ƒæ¨¡å¼ï¼Œ
+ç›®å‰ RGB é¢œè‰²å·²ç»å¤Ÿç”¨äº†ã€‚
 
-\section{µ¥/Ë«À¸»ìÅÅ}
-\Memph{cuted}ºê°üÓÃÓÚÔÚË«À¸Ñ¡ÏîÏÂÌá¹© Full width µÄµ¥À¸»·¾³¡£
+\section{å•/åŒæ æ··æ’}
+\Memph{cuted}å®åŒ…ç”¨äºåœ¨åŒæ é€‰é¡¹ä¸‹æä¾› Full width çš„å•æ ç¯å¢ƒã€‚
 \begin{Verbatim}
 \documentclass[a4paper,twocolumn,10pt]{article}
 \usepackage{cuted}
 \begin{document}
-% ´Ë´¦ÎªË«À¸...
+% æ­¤å¤„ä¸ºåŒæ ...
 \begin{strip}
-	% ´Ë´¦µ¥À¸...
+	% æ­¤å¤„å•æ ...
 \end{strip}
 \end{document}
 \end{Verbatim}
 
 
-\section{Asymptote: ¶àĞĞÎÄ±¾µÄ label}
-ĞèÒªÔÚÍ¼ÖĞÊ¹ÓÃ¶àĞĞÎÄ±¾£¬¿ÉÒÔÓÃ minipage º¯Êı:
-\piccaption{Asymptote µ¼ÈëÍ¼ÏñÎÄ¼ş\label{label_muti_lines}}
+\section{Asymptote: å¤šè¡Œæ–‡æœ¬çš„ label}
+éœ€è¦åœ¨å›¾ä¸­ä½¿ç”¨å¤šè¡Œæ–‡æœ¬ï¼Œå¯ä»¥ç”¨ minipage å‡½æ•°:
+\piccaption{Asymptote å¯¼å…¥å›¾åƒæ–‡ä»¶\label{label_muti_lines}}
 \parpic(4.3cm,4.3cm)[r]{\includegraphics[width=3.9cm]{./figs/label_muti_lines.pdf}}
 \begin{Verbatim}
 pair O=(0,0);
@@ -777,65 +831,63 @@ label( minipage(l, 30mm), (0,0), SE, blue);
 \end{Verbatim}
 
 \section{Asymptote: settings}
-Asymptote µÄÉè¶¨Ïî:
+Asymptote çš„è®¾å®šé¡¹:
 \begin{itemize}
-	\item settings.outformat="pdf\verb+|+png\verb+|+jpg\ldots" Éè¶¨Í¼ĞÎ¸ñÊ½
-	\item settings.tex="pdflatex" Ö¸¶¨ label µÄ±àÒëÆ÷
+	\item settings.outformat="pdf\verb+|+png\verb+|+jpg\ldots" è®¾å®šå›¾å½¢æ ¼å¼
+	\item settings.tex="pdflatex" æŒ‡å®š label çš„ç¼–è¯‘å™¨
 \end{itemize}
 
-\section{Asymptote: ·ÖÒ³Êä³ö}
+\section{Asymptote: åˆ†é¡µè¾“å‡º}
 \verb+shipout("FileNamePrefix")+
 
 \section{Asymptote: tips}
-\subsection{±äÁ¿Ãû³åÍ»}
-±äÁ¿Ãû³åÍ»: E S W N£¬ÊÇÔ¤¶¨Òå±äÁ¿£¬±ÜÃâ×÷Îª×Ô¶¨Òå±äÁ¿Ê¹ÓÃ¡£
+\subsection{å˜é‡åå†²çª}
+å˜é‡åå†²çª: E S W Nï¼Œæ˜¯é¢„å®šä¹‰å˜é‡ï¼Œé¿å…ä½œä¸ºè‡ªå®šä¹‰å˜é‡ä½¿ç”¨ã€‚
 
-\subsection{Óï·¨}
-Transform Ë³Ğò:  \verb+transform * Lable;+
+\subsection{è¯­æ³•}
+Transform é¡ºåº:  \verb+transform * Lable;+
 
-\subsection{pair ¸³ÖµÄ¬ÈÏĞĞÎª}
-¶Ô pair ±äÁ¿¸³ÖµÊ±£¬ÈôÖ±½ÓÓÃÒ»¸öÊı×Ö£¬Ôò y ×ø±êÄ¬ÈÏÎª0 ¡£
+\subsection{pair èµ‹å€¼é»˜è®¤è¡Œä¸º}
+å¯¹ pair å˜é‡èµ‹å€¼æ—¶ï¼Œè‹¥ç›´æ¥ç”¨ä¸€ä¸ªæ•°å­—ï¼Œåˆ™ y åæ ‡é»˜è®¤ä¸º0 ã€‚
 \begin{Verbatim}
 pair origin = 0;    // origin = (0,0)
 pair A = 7;    // A = (7,0)
 \end{Verbatim}
 
-\subsection{ÑÕÉ«¼ÆËã}
-ÑÕÉ«¿ÉÒÔÓë real Ïà³Ë£¬ $real\in [0,1]$ £¬³ËÒÔ$0$ÊÇºÚÉ«£¬³ËÒÔ$1$ÊÇ±¾É«¡£
+\subsection{é¢œè‰²è®¡ç®—}
+é¢œè‰²å¯ä»¥ä¸ real ç›¸ä¹˜ï¼Œ $real\in [0,1]$ ï¼Œä¹˜ä»¥$0$æ˜¯é»‘è‰²ï¼Œä¹˜ä»¥$1$æ˜¯æœ¬è‰²ã€‚
 \begin{Verbatim}
 0.5*red;
 0.9*yellow;
 \end{Verbatim}
 
 
-\section{ÔÚºê°üÖĞÊ¹ÓÃ CJK °ü}
+\section{åœ¨å®åŒ…ä¸­ä½¿ç”¨ CJK åŒ…}
 \begin{verbatim}
 \RequirePackage{CJK}
 \AtBeginDocument{\begin{CJK}{GBK}{fs}}
 \AtEndDocument{\clearpage\end{CJK}}
 \end{verbatim}
 
-ÔÚ\verb+\end{CJK}+Ç°Ğè¼Ó\verb+\clearpage+£¬·ñÔò±àÒëÆ÷»á±¨´í¡£
+åœ¨\verb+\end{CJK}+å‰éœ€åŠ \verb+\clearpage+ï¼Œå¦åˆ™ç¼–è¯‘å™¨ä¼šæŠ¥é”™ã€‚
 
 
-\section{³£ÓÃºê°ü}
+\section{å¸¸ç”¨å®åŒ…}
 \begin{tabular}[h]{llp{113mm}}
 	\hline
-	tipa & ¹ú¼ÊÒô±ê & ¿ÉÒÔÅÅ°æ¹ú¼ÊÒô±ê×Ö·û\\
-	muticol & ¶àÀ¸ÅÅ°æ & \LaTeX{}±ê×¼¹¤¾ß°ü£¬¿ÉÊµÏÖÔÚÒ»Ò³ÄÚ»ìµ¥À¸ºÍ¶àÀ¸°æÊ½\\
-	longtable & ³¤±í¸ñ & Èô±í¸ñ³¬¹ıÒ»Ò³£¬¿ÉÊ¹ÓÃ´Ëºê°üÅÅ°æ\\
-	verbatim & ³­Â¼ÅÅ°æ & \LaTeX{}±ê×¼¹¤¾ß°ü£¬ÖØ¶¨ÒåÁË verbatim »·¾³£¬Ìá¹©ÁËĞÂµÄ»·¾³ comment ºÍ verbatiminput À´ÖĞ¼ÓÈëÆÀÂÛºÍ³­Â¼ÎÄ¼ş¡£\\
-	listings & Ô´ÂëÅÅ°æ & ÅÅ°æÔ´´úÂë£¬Ìá¹©Óï·¨¼ÓÁÁÏÔÊ¾µÄ¹¦ÄÜ¡£\\
-	abstract & ÕªÒªÅÅ°æ & ÓÃÀ´ÉèÖÃ abstract »·¾³£¬ÌØ±ğÊÇÔÚË«À¸°æÊ½ÖĞÅÅ°æµ¥À¸¼ò½éÊ±¡£\\
-	schedule & Ê±¼ä±íÅÅ°æ & \\
-	hyperref & ³¬Á´½Ó & À©Õ¹ÁË\LaTeX{}ËùÓĞ½»²æÒıÓÃÃüÁî(°üÀ¨Ä¿Â¼£¬²Î¿¼ÎÄÏ×µÈ)µÄ¹¦ÄÜ£¬Ê¹ÆäÉú³É¸÷ÖÖÇı¶¯Èç dvips, pdftex ¿ÉÊ¶±ğµÄ special ÃüÁî£¬´Ó¶øµÃµ½³¬ÎÄ±¾Á´½Ó¡£¸Ãºê°ü»¹Ìá¹©ÁËĞÂµÄÃüÁîÖ§³ÖÔÚÎÄµµÖĞ¼ÓÈë¶ÔÍâ²¿ÎÄµµºÍ Internet ÍøÖ·µÄÁ´½Ó¡£\\
-	soul & & Ö§³Ö¶Ôµ¥´Ê¼ÓÉÏÏÂ»®Ïß»òÆäÃ¿¸ö×ÖÄ¸ÔÚÒ»¶¨µÄ¿í¶ÈÄÚ¾ùÔÈÉ¢²¼¡£\\
+	tipa & å›½é™…éŸ³æ ‡ & å¯ä»¥æ’ç‰ˆå›½é™…éŸ³æ ‡å­—ç¬¦\\
+	muticol & å¤šæ æ’ç‰ˆ & \LaTeX{}æ ‡å‡†å·¥å…·åŒ…ï¼Œå¯å®ç°åœ¨ä¸€é¡µå†…æ··å•æ å’Œå¤šæ ç‰ˆå¼\\
+	longtable & é•¿è¡¨æ ¼ & è‹¥è¡¨æ ¼è¶…è¿‡ä¸€é¡µï¼Œå¯ä½¿ç”¨æ­¤å®åŒ…æ’ç‰ˆ\\
+	verbatim & æŠ„å½•æ’ç‰ˆ & \LaTeX{}æ ‡å‡†å·¥å…·åŒ…ï¼Œé‡å®šä¹‰äº† verbatim ç¯å¢ƒï¼Œæä¾›äº†æ–°çš„ç¯å¢ƒ comment å’Œ verbatiminput æ¥ä¸­åŠ å…¥è¯„è®ºå’ŒæŠ„å½•æ–‡ä»¶ã€‚\\
+	listings & æºç æ’ç‰ˆ & æ’ç‰ˆæºä»£ç ï¼Œæä¾›è¯­æ³•åŠ äº®æ˜¾ç¤ºçš„åŠŸèƒ½ã€‚\\
+	abstract & æ‘˜è¦æ’ç‰ˆ & ç”¨æ¥è®¾ç½® abstract ç¯å¢ƒï¼Œç‰¹åˆ«æ˜¯åœ¨åŒæ ç‰ˆå¼ä¸­æ’ç‰ˆå•æ ç®€ä»‹æ—¶ã€‚\\
+	schedule & æ—¶é—´è¡¨æ’ç‰ˆ & \\
+	hyperref & è¶…é“¾æ¥ & æ‰©å±•äº†\LaTeX{}æ‰€æœ‰äº¤å‰å¼•ç”¨å‘½ä»¤(åŒ…æ‹¬ç›®å½•ï¼Œå‚è€ƒæ–‡çŒ®ç­‰)çš„åŠŸèƒ½ï¼Œä½¿å…¶ç”Ÿæˆå„ç§é©±åŠ¨å¦‚ dvips, pdftex å¯è¯†åˆ«çš„ special å‘½ä»¤ï¼Œä»è€Œå¾—åˆ°è¶…æ–‡æœ¬é“¾æ¥ã€‚è¯¥å®åŒ…è¿˜æä¾›äº†æ–°çš„å‘½ä»¤æ”¯æŒåœ¨æ–‡æ¡£ä¸­åŠ å…¥å¯¹å¤–éƒ¨æ–‡æ¡£å’Œ Internet ç½‘å€çš„é“¾æ¥ã€‚\\
+	soul & & æ”¯æŒå¯¹å•è¯åŠ ä¸Šä¸‹åˆ’çº¿æˆ–å…¶æ¯ä¸ªå­—æ¯åœ¨ä¸€å®šçš„å®½åº¦å†…å‡åŒ€æ•£å¸ƒã€‚\\
 	\hline
 \end{tabular}
 
 
-
-\end{CJK}
 
 \end{document}
 

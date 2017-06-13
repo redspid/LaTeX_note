@@ -204,10 +204,10 @@ normalsize {\large large} {\Large Large} {\LARGE LARGE}
 
 \subsection{对于pdftex / pdflatex}
 导言区加入: 
-\begin{verbatim}
+\begin{Verbatim}
 \setlength{\pdfpageheight}{<height>} 
 \setlength{\pdfpagewidth}{<width>} 
-\end{verbatim}
+\end{Verbatim}
 
 \subsection{对于 dvipdfm(x)}
 导言区加入: \verb+\special{pdf: pagesize width <width> height <height>}+
@@ -246,6 +246,10 @@ wrapfig 会自动计算图形的高度。不过，我们也可设定图形的高
 \end{Verbatim}
 
 \subsection{picins 宏包}
+texlive2017 未包含 picins 宏包。
+下载，解压后将 picins 目录复制到 \verb+texlive/texmf-local/tex+ 目录下。
+运行 \verb+texhash+ 更新文件名数据库即可。
+
 用法：%
 \verb+\parpic(宽度,高度)(水平偏移,垂直偏移)[选项][位置]{图形}+
 
@@ -834,8 +838,11 @@ label( minipage(l, 30mm), (0,0), SE, blue);
 Asymptote 的设定项:
 \begin{itemize}
 	\item settings.outformat="pdf\verb+|+png\verb+|+jpg\ldots" 设定图形格式
-	\item settings.tex="pdflatex" 指定 label 的编译器
+	\item settings.tex="xelatex" 指定 label 的编译器
 \end{itemize}
+
+Asymptote 使用 ghostscript 生成 PDF 格式文件，因此，
+需要先安装 ghostscript 。
 
 \section{Asymptote: 分页输出}
 \verb+shipout("FileNamePrefix")+
@@ -862,19 +869,28 @@ pair A = 7;    // A = (7,0)
 \end{Verbatim}
 
 
-\section{在宏包中使用 CJK 包}
-\begin{verbatim}
+\section{在宏包中使用 CJK 包\Mdepr}
+\begin{Verbatim}
 \RequirePackage{CJK}
 \AtBeginDocument{\begin{CJK}{GBK}{fs}}
 \AtEndDocument{\clearpage\end{CJK}}
-\end{verbatim}
+\end{Verbatim}
 
 在\verb+\end{CJK}+前需加\verb+\clearpage+，否则编译器会报错。
+
+\section{在asymptote中使用CJK(\XeLaTeX 编译)}
+\begin{Verbatim}
+usepackage("xeCJK");
+texpreamble("\setCJKmainfont{SimSun}");
+\end{Verbatim}
 
 
 \section{常用宏包}
 \begin{tabular}[h]{llp{113mm}}
 	\hline
+	xpinyin & 拼音 & 手工注音，自动注音，多音字标识\\
+	picins & 图文混排 & 图文混排\\
+	hologo & logo & \TeX 相关logo: \hologo{XeLaTeX}、\hologo{AmSLaTeX} \ldots\\
 	tipa & 国际音标 & 可以排版国际音标字符\\
 	muticol & 多栏排版 & \LaTeX{}标准工具包，可实现在一页内混单栏和多栏版式\\
 	longtable & 长表格 & 若表格超过一页，可使用此宏包排版\\

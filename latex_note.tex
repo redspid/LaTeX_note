@@ -189,6 +189,13 @@ article 文档类默认首段缩进 2em ，从正文看可能比两个字符的�
 normalsize {\large large} {\Large Large} {\LARGE LARGE}
 {\huge huge} {\Huge Huge}
 
+\section{指定字号}
+\verb+\fontsize{size}{baselineskip}\selectfont+ 第一个参数指定字号，
+第二个参数指定 baselineskip，然后\verb+\selectfont+命令执行选定的字体。
+
+例:\verb+\fontsize{36}{38}\selectfont+
+{\fontsize{36}{38}\selectfont 三十六号字}
+
 \section{\LaTeX{} 画线}
 \verb+\rule[lift]{width}{height}+
 

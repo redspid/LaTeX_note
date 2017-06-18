@@ -121,7 +121,7 @@ makeindex -s gglo.ist -o name.gls name.glo
 这个命令应该在包定义源文件的最前面使用。它用于告诉 \LaTeX{} 宏包的名称%
 从而允许 \LaTeX{} 在你尝试两次引入同一个宏包的时候给出一个良好的错误信息。
 
-\section{在 CJK 中如何调整汉字的间距}
+\section{在 CJK 中如何调整汉字的间距\Mdepr}
 CJK 会在两个汉字间插入一个 \verb+\CJKglue+，
 因此我们修改 \verb+\CJKglue+ 的定义就可以调整汉字的间距：
 \verb+\renewcommand{CJKglue}{\hskip<b>plus<p>minus<m>}+\\
@@ -218,6 +218,29 @@ normalsize {\large large} {\Large Large} {\LARGE LARGE}
 
 \subsection{对于 dvipdfm(x)}
 导言区加入: \verb+\special{pdf: pagesize width <width> height <height>}+
+
+\section{纸张横向排版}
+\verb+\documentclass[landscape,12pt]+
+
+\section{盒子}
+\subsection{盒子宽度，长度增减}
+\verb+\settowidth{\lenName}{blablabla}+ 测量长度并赋值给\verb+\lenName+
+
+构造两个盒子，第二个盒子的宽度比前一个宽$3em$
+\begin{Verbatim}
+\newlength{\lenName}
+\mbox{blablabla}
+\settowidth{\lenName}{\mbox{blablabla}} %把前一个盒子的宽度赋值给 \lenName
+\addtolength{\lenName}{3em} %增加3em
+\makebox[\lenName]{oh yeah} %构造第二个盒子
+\end{Verbatim}
+
+\subsection{水平盒子、纵向盒子}
+\verb+\vbox{}+ 中的元素纵向排列，纵向间距受行间距控制。
+\verb+\hbox{}+ 中的元素水平排列。
+
+\verb+\mbox{\vbox{\baselineskip=1ex\hbox{abc}\hbox{def}}}+\hspace{2em}
+\mbox{\vbox{\baselineskip=1ex\hbox{abc}\hbox{def}}}
 
 
 \section{图形和表格目录}

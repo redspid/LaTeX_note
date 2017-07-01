@@ -23,49 +23,50 @@
 \contentsline {section}{\numberline {13}盒子}{8}
 \contentsline {subsection}{\numberline {13.1}盒子宽度，长度增减}{8}
 \contentsline {subsection}{\numberline {13.2}水平盒子、纵向盒子}{9}
-\contentsline {section}{\numberline {14}图形和表格目录}{9}
-\contentsline {section}{\numberline {15}图文混排}{9}
-\contentsline {subsection}{\numberline {15.1}wrapfig 宏包}{9}
-\contentsline {subsection}{\numberline {15.2}picins 宏包}{9}
-\contentsline {section}{\numberline {16}堆叠符号}{10}
-\contentsline {section}{\numberline {17}分隔符$\mid $}{10}
-\contentsline {section}{\numberline {18}存储盒子的用法}{10}
-\contentsline {section}{\numberline {19}文字、背景颜色}{11}
-\contentsline {section}{\numberline {20}\hologoRobust {XeLaTeX}}{11}
-\contentsline {section}{\numberline {21}拼音宏包 xpinyin}{11}
-\contentsline {section}{\numberline {22}Asymptote 指示箭头}{11}
-\contentsline {section}{\numberline {23}用 \LaTeX -Suite 导入模板}{12}
-\contentsline {section}{\numberline {24}Asymptote 带边框的文字}{12}
-\contentsline {section}{\numberline {25}Asymptote labelpath}{13}
-\contentsline {section}{\numberline {26}\LaTeX -Suite hotkey}{13}
-\contentsline {subsection}{\numberline {26.1}智能扩展字符：}{13}
-\contentsline {subsection}{\numberline {26.2}重复键入自动扩展字符}{14}
-\contentsline {subsection}{\numberline {26.3}$\backprime $前缀扩展字符：}{14}
-\contentsline {subsection}{\numberline {26.4}希腊字母:}{14}
-\contentsline {section}{\numberline {27}Asymptote: 轴对称变换}{14}
-\contentsline {section}{\numberline {28}Asymptote: 标记角度}{15}
-\contentsline {section}{\numberline {29}Asymptote 中的中文}{15}
-\contentsline {section}{\numberline {30}Asymptote 的线条连接风格}{16}
-\contentsline {section}{\numberline {31}Asymptote: 导入图像文件}{16}
-\contentsline {section}{\numberline {32}\LaTeX {} 中局部行距设置}{16}
-\contentsline {section}{\numberline {33}Asymptote: cut() 和 struct slice}{16}
-\contentsline {section}{\numberline {34}Asymptote 颜色名称}{17}
-\contentsline {section}{\numberline {35}Asymptote: 字体大小，Arrow、UnFill 大小 和 xtick}{17}
-\contentsline {section}{\numberline {36}Asymptote: size()函数}{18}
-\contentsline {section}{\numberline {37}特殊符号}{18}
-\contentsline {subsection}{\numberline {37.1}带外圈的符号}{18}
-\contentsline {subsection}{\numberline {37.2}货币符号}{18}
-\contentsline {section}{\numberline {38}Beamer 文档类}{19}
-\contentsline {section}{\numberline {39}自定义颜色}{19}
-\contentsline {section}{\numberline {40}单/双栏混排}{19}
-\contentsline {section}{\numberline {41}Asymptote: 多行文本的 label}{19}
-\contentsline {section}{\numberline {42}Asymptote: settings}{20}
-\contentsline {section}{\numberline {43}Asymptote: 分页输出}{20}
-\contentsline {section}{\numberline {44}Asymptote: tips}{20}
-\contentsline {subsection}{\numberline {44.1}变量名冲突}{20}
-\contentsline {subsection}{\numberline {44.2}语法}{20}
-\contentsline {subsection}{\numberline {44.3}pair 赋值默认行为}{20}
-\contentsline {subsection}{\numberline {44.4}颜色计算}{20}
-\contentsline {section}{\numberline {45}在宏包中使用 CJK 包\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \leavevmode {\color {red}DEPRECATED}}{20}
-\contentsline {section}{\numberline {46}在asymptote中使用CJK(\hologoRobust {XeLaTeX}编译)}{21}
-\contentsline {section}{\numberline {47}常用宏包}{21}
+\contentsline {section}{\numberline {14}显示参数值}{9}
+\contentsline {section}{\numberline {15}图形和表格目录}{9}
+\contentsline {section}{\numberline {16}图文混排}{9}
+\contentsline {subsection}{\numberline {16.1}wrapfig 宏包}{9}
+\contentsline {subsection}{\numberline {16.2}picins 宏包}{9}
+\contentsline {section}{\numberline {17}堆叠符号}{10}
+\contentsline {section}{\numberline {18}分隔符$\mid $}{10}
+\contentsline {section}{\numberline {19}存储盒子的用法}{11}
+\contentsline {section}{\numberline {20}文字、背景颜色}{11}
+\contentsline {section}{\numberline {21}\hologoRobust {XeLaTeX}}{11}
+\contentsline {section}{\numberline {22}拼音宏包 xpinyin}{11}
+\contentsline {section}{\numberline {23}Asymptote 指示箭头}{12}
+\contentsline {section}{\numberline {24}用 \LaTeX -Suite 导入模板}{12}
+\contentsline {section}{\numberline {25}Asymptote 带边框的文字}{12}
+\contentsline {section}{\numberline {26}Asymptote labelpath}{13}
+\contentsline {section}{\numberline {27}\LaTeX -Suite hotkey}{13}
+\contentsline {subsection}{\numberline {27.1}智能扩展字符：}{14}
+\contentsline {subsection}{\numberline {27.2}重复键入自动扩展字符}{14}
+\contentsline {subsection}{\numberline {27.3}$\backprime $前缀扩展字符：}{14}
+\contentsline {subsection}{\numberline {27.4}希腊字母:}{14}
+\contentsline {section}{\numberline {28}Asymptote: 轴对称变换}{15}
+\contentsline {section}{\numberline {29}Asymptote: 标记角度}{15}
+\contentsline {section}{\numberline {30}Asymptote 中的中文}{15}
+\contentsline {section}{\numberline {31}Asymptote 的线条连接风格}{16}
+\contentsline {section}{\numberline {32}Asymptote: 导入图像文件}{16}
+\contentsline {section}{\numberline {33}\LaTeX {} 中局部行距设置}{16}
+\contentsline {section}{\numberline {34}Asymptote: cut() 和 struct slice}{16}
+\contentsline {section}{\numberline {35}Asymptote 颜色名称}{17}
+\contentsline {section}{\numberline {36}Asymptote: 字体大小，Arrow、UnFill 大小 和 xtick}{17}
+\contentsline {section}{\numberline {37}Asymptote: size()函数}{18}
+\contentsline {section}{\numberline {38}特殊符号}{18}
+\contentsline {subsection}{\numberline {38.1}带外圈的符号}{18}
+\contentsline {subsection}{\numberline {38.2}货币符号}{18}
+\contentsline {section}{\numberline {39}Beamer 文档类}{19}
+\contentsline {section}{\numberline {40}自定义颜色}{19}
+\contentsline {section}{\numberline {41}单/双栏混排}{19}
+\contentsline {section}{\numberline {42}Asymptote: 多行文本的 label}{19}
+\contentsline {section}{\numberline {43}Asymptote: settings}{20}
+\contentsline {section}{\numberline {44}Asymptote: 分页输出}{20}
+\contentsline {section}{\numberline {45}Asymptote: tips}{20}
+\contentsline {subsection}{\numberline {45.1}变量名冲突}{20}
+\contentsline {subsection}{\numberline {45.2}语法}{20}
+\contentsline {subsection}{\numberline {45.3}pair 赋值默认行为}{20}
+\contentsline {subsection}{\numberline {45.4}颜色计算}{20}
+\contentsline {section}{\numberline {46}在宏包中使用 CJK 包\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \leavevmode {\color {red}DEPRECATED}}{20}
+\contentsline {section}{\numberline {47}在asymptote中使用CJK(\hologoRobust {XeLaTeX}编译)}{21}
+\contentsline {section}{\numberline {48}常用宏包}{21}

@@ -200,11 +200,13 @@ normalsize {\large large} {\Large Large} {\LARGE LARGE}
 \verb+\rule[lift]{width}{height}+
 
 \section{纸张尺寸设置}
-\verb+\paperheight=26cm+\\
-\verb+\paperwidth=20cm+\\
+\verb+\setlength{\paperheight}{26cm}+\\
+\verb+\setlength{\paperwidth}{20cm}+\\
 
 注意当前的 \verb+\textheight+ 和 \verb+\textwidth+ 设置，
 应在纸张大小的范围内。
+
+如果打印输出，则需要在打印机参数中设置相应的纸张尺寸。
 
 \subsection{对于dvips}
 导言区加入: \verb+\special{papersize=<width,heith>}+
@@ -218,6 +220,33 @@ normalsize {\large large} {\Large Large} {\LARGE LARGE}
 
 \subsection{对于 dvipdfm(x)}
 导言区加入: \verb+\special{pdf: pagesize width <width> height <height>}+
+
+\section{页码设置}
+\subsection{\LaTeX 中与页码设置相关的命令}
+\begin{itemize}
+	\item \verb+\pagestyle{}+ 设置所有页面样式
+	\item \verb+\thispagestyle{}+ 设置当前页面样式
+	\item \verb+\setcounter{page}{number}+ 重置页码计数器
+	\item \verb+\pagenumbering{}+ 设置页码样式
+\end{itemize}
+
+\subsection{页面样式}
+\begin{itemize}
+	\item empty 无页眉页脚
+	\item plain 无页眉，页脚包含一个居中的页码(default)
+	\item headings 无页脚，页眉包含章/节或者段落的名字和页码
+	\item myheadings 无页脚，页眉包含页码
+\end{itemize}
+
+\subsection{页码风格}
+\begin{itemize}
+	\item arabic 阿拉伯数字(default)
+	\item roman 小写罗马数字
+	\item Roman 大写罗马数字
+	\item alph 小写字符形式
+	\item Alph 大写字符形式
+\end{itemize}
+ 
 
 \section{纸张横向排版}
 \verb+\documentclass[landscape,12pt]+

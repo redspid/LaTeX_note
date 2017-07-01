@@ -3,6 +3,7 @@
 \input{MyLayout.tex}
 \usepackage{hologo}
 \usepackage{xeCJK}
+\usepackage{xeCJKfntef}
 \setmainfont{Times New Roman}
 \setCJKmainfont{FangSong}
 \setCJKmonofont{FangSong}
@@ -385,14 +386,17 @@ texlive2017 未包含 picins 宏包。
 中文环境需将这条指令置于 \verb+\begin{CJK}+ 下面。\\
 例：\verb+\textcolor{red}{红色的文字}+：\textcolor{red}{红色的文字}
 
+color 宏包预定义的颜色名称有: black, white, red, green, blue, cyan,
+magenta, yellow
+
 \section{\XeLaTeX}
 三天前(2017-06-09)开始用 \XeLaTeX ，把一堆问题折腾好了，
 当我写这段笔记的时候，哇哦\ldots 竟然发现打不出 \XeLaTeX 符号，
 编译器提示\verb+\XeLaTeX+这个宏 undefined.
 
-搜了一圈没搜到，暂时用 \verb+Xe\LaTeX+ 替代。
-先自己定义一下吧 \verb+\newcommand{\XeLaTeX}{Xe\LaTeX}+，
-等找到了直接删除 newcommand 定义。
+\CJKsout{搜了一圈没搜到，暂时用}\verb+Xe\LaTeX+\CJKsout{替代。
+先自己定义一下吧}\verb+\newcommand{\XeLaTeX}{Xe\LaTeX}+，
+\CJKsout{等找到了直接删除 newcommand 定义。}
 
 源文件全部使用 utf-8 编码。中文使用 xeCJK 宏包。
 
@@ -416,6 +420,10 @@ OK，现在可以把上午挖的坑填上了。在知乎上提了问题，得到
 默认确实没有定义 \verb+\XeLaTeX+ ， hologo 宏包里面提供了这些logo。
 现在本文引入了 hologo 宏包，\XeLaTeX 的定义改成了:
 \verb+\newcommand{\XeLaTeX}{\hologo{XeLaTeX}}+
+
+xeCJK 包含有一个子宏包 xeCJKfntef，
+可以用它来实现汉字加点和可断行的下划线等效果。
+本节第二段的效果就是用它来实现的。
 
 \section{拼音宏包 xpinyin}
 原来用 pinyin+ruby 宏包写拼音，因为宏包兼容问题，还没法合并到这个文档。

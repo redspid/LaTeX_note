@@ -62,11 +62,12 @@
 \contentsline {section}{\numberline {42}Asymptote: 多行文本的 label}{19}
 \contentsline {section}{\numberline {43}Asymptote: settings}{20}
 \contentsline {section}{\numberline {44}Asymptote: 分页输出}{20}
-\contentsline {section}{\numberline {45}Asymptote: tips}{20}
-\contentsline {subsection}{\numberline {45.1}变量名冲突}{20}
-\contentsline {subsection}{\numberline {45.2}语法}{20}
-\contentsline {subsection}{\numberline {45.3}pair 赋值默认行为}{20}
-\contentsline {subsection}{\numberline {45.4}颜色计算}{20}
-\contentsline {section}{\numberline {46}在宏包中使用 CJK 包\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \leavevmode {\color {red}DEPRECATED}}{20}
-\contentsline {section}{\numberline {47}在asymptote中使用CJK(\hologoRobust {XeLaTeX}编译)}{21}
-\contentsline {section}{\numberline {48}常用宏包}{21}
+\contentsline {section}{\numberline {45}Asymptote: 读入数据文件}{20}
+\contentsline {section}{\numberline {46}Asymptote: tips}{20}
+\contentsline {subsection}{\numberline {46.1}变量名冲突}{20}
+\contentsline {subsection}{\numberline {46.2}语法}{20}
+\contentsline {subsection}{\numberline {46.3}pair 赋值默认行为}{20}
+\contentsline {subsection}{\numberline {46.4}颜色计算}{20}
+\contentsline {section}{\numberline {47}在宏包中使用 CJK 包\relax \fontsize {10}{12}\selectfont \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 4.5\p@ plus2\p@ minus\p@ \topsep 9\p@ plus3\p@ minus5\p@ \itemsep 4.5\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \leavevmode {\color {red}DEPRECATED}}{21}
+\contentsline {section}{\numberline {48}在asymptote中使用CJK(\hologoRobust {XeLaTeX}编译)}{21}
+\contentsline {section}{\numberline {49}常用宏包}{21}

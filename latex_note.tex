@@ -918,6 +918,15 @@ Asymptote 使用 ghostscript 生成 PDF 格式文件，因此，
 \section{Asymptote: 分页输出}
 \verb+shipout("FileNamePrefix")+
 
+\section{Asymptote: 读入数据文件}
+\begin{Verbatim}
+file fin = input("data.csv").line().csv()
+while ( ! eof(fin) ) {
+	real[] row = fin;
+}
+\end{Verbatim}
+
+
 \section{Asymptote: tips}
 \subsection{变量名冲突}
 变量名冲突: E S W N，是预定义变量，避免作为自定义变量使用。

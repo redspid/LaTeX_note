@@ -389,6 +389,34 @@ texlive2017 未包含 picins 宏包。
 color 宏包预定义的颜色名称有: black, white, red, green, blue, cyan,
 magenta, yellow
 
+\subsection{文字背景色 方案}
+\colorbox{red}{文字背景色}
+\subsubsection{方案:}
+可用于中文，不可换行
+\begin{verbatim}
+\usepackage{color}
+\colorbox{red}{文字背景色}
+\end{verbatim}
+
+\subsubsection{方案:}
+中文有问题，可换行
+\begin{verbatim}
+\usepackage{color,soul}
+\sethlcolor{red}  
+\hl{background of text}
+\end{verbatim}
+
+\subsubsection{方案:}
+可用于中文，可换行，不可用于行内(inline)
+\begin{verbatim}
+\usepackage{color,framed}
+\definecolor{shadecolor}{rgb}{0.92,0.92,0.92}  
+\begin{shaded}  
+	有背景色的文本块
+\end{shaded}
+\end{verbatim}
+
+
 \section{\XeLaTeX}
 三天前(2017-06-09)开始用 \XeLaTeX ，把一堆问题折腾好了，
 当我写这段笔记的时候，哇哦\ldots 竟然发现打不出 \XeLaTeX 符号，
@@ -424,6 +452,10 @@ OK，现在可以把上午挖的坑填上了。在知乎上提了问题，得到
 xeCJK 包含有一个子宏包 xeCJKfntef，
 可以用它来实现汉字加点和可断行的下划线等效果。
 本节第二段的效果就是用它来实现的。
+
+xelatex 编译时用 \verb+\includegraphics{}+ 导入图片，
+大括号内的路径前后不能有空格，图片文件名不能多于一个 ``.''，
+否则编译器会找不到图片文件。
 
 \section{拼音宏包 xpinyin}
 原来用 pinyin+ruby 宏包写拼音，因为宏包兼容问题，还没法合并到这个文档。
